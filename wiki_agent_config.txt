@@ -1,0 +1,896 @@
+# Agent Configuration
+
+This guide covers the configuration and customization of all agents in the CIP Multi-Agent Knowledge Graph System. Each agent is specialized for different roles and expertise areas.
+
+## Agent Architecture Overview
+
+```mermaid
+graph TB
+    subgraph "User Input"
+        Q[User Query]
+    end
+    
+    subgraph "Coordinator Agent"
+        IA[Intent Analysis]
+        CA[Complexity Assessment]
+        AR[Agent Routing]
+    end
+    
+    subgraph "Specialized Agents"
+        CIPE[CIP Engineer Agent<br/>Technical Expertise]
+        SFM[Subfab Manager Agent<br/>Business Operations]
+        SA[Service Admin Agent<br/>System Administration]
+        KS[Knowledge Specialist Agent<br/>Domain Methodology]
+    end
+    
+    subgraph "Response Processing"
+        RS[Response Synthesis]
+        QA[Quality Assessment]
+        FR[Final Response]
+    end
+    
+    Q --> IA
+    IA --> CA
+    CA --> AR
+    
+    AR --> CIPE
+    AR --> SFM
+    AR --> SA
+    AR --> KS
+    
+    CIPE --> RS
+    SFM --> RS
+    SA --> RS
+    KS --> RS
+    
+    RS --> QA
+    QA --> FR
+```
+
+---
+
+## 🎯 Agent Types and Specializations
+
+### Agent Comparison Matrix
+
+| Agent | Primary Role | Knowledge Domain | Decision Speed | Complexity Handling | Escalation Rate |
+|-------|-------------|------------------|----------------|-------------------|-----------------|
+| **Coordinator** | Query Routing | System Overview | Very Fast | Low | N/A |
+| **CIP Engineer** | Technical Analysis | Pump Technology | Fast | High | Medium |
+| **Subfab Manager** | Business Operations | Cost & Planning | Medium | Medium | Low |
+| **Service Admin** | System Management | IT Operations | Fast | Low | Low |
+| **Knowledge Specialist** | Methodology Expert | Domain Knowledge | Slow | Very High | Very Low |
+
+---
+
+## 🤖 Coordinator Agent
+
+### Purpose and Responsibilities
+The Coordinator Agent serves as the intelligent dispatcher, analyzing incoming queries and routing them to the most appropriate specialized agent.
+
+### Configuration
+```yaml
+# config/agents/coordinator.yaml
+coordinator:
+  enabled: true
+  model: "gpt-4-turbo-preview"
+  temperature: 0.1
+  
+  intent_classification:
+    confidence_threshold: 0.8
+    fallback_agent: "cip_engineer"
+    
+  complexity_assessment:
+    simple_keywords: ["what", "where", "when", "which", "status"]
+    moderate_keywords: ["how", "why", "analyze", "compare", "explain"]
+    complex_keywords: ["methodology", "framework", "optimization", "strategy"]
+    
+  routing_rules:
+    risk_assessment: "cip_engineer"
+    troubleshooting: "cip_engineer"
+    technical_analysis: "cip_engineer"
+    business_impact: "subfab_manager"
+    operational_planning: "subfab_manager"
+    resource_management: "subfab_manager"
+    methodology: "knowledge_specialist"
+    procedures: "knowledge_specialist"
+    system_admin: "service_admin"
+    user_management: "service_admin"
+    
+  escalation_criteria:
+    multi_domain_query: true
+    confidence_below: 0.7
+    complexity_above: "complex"
+    business_critical: true
+```
+
+### Intent Classification Examples
+```python
+# Intent classification patterns
+INTENT_PATTERNS = {
+    "risk_assessment": {
+        "keywords": ["risk", "critical", "failure", "probability", "P30", "urgent"],
+        "patterns": [
+            r"which pumps.*risk",
+            r"critical.*assets?",
+            r"failure.*probability",
+            r"immediate.*replacement"
+        ],
+        "confidence_boost": 0.2
+    },
+    
+    "troubleshooting": {
+        "keywords": ["problem", "issue", "troubleshoot", "diagnose", "why.*fail"],
+        "patterns": [
+            r"why.*not working",
+            r"problem with.*",
+            r"troubleshoot.*",
+            r"what.*wrong"
+        ],
+        "confidence_boost": 0.15
+    },
+    
+    "business_impact": {
+        "keywords": ["cost", "impact", "revenue", "downtime", "business"],
+        "patterns": [
+            r"cost.*of.*failure",
+            r"business.*impact",
+            r"revenue.*loss",
+            r"downtime.*cost"
+        ],
+        "confidence_boost": 0.25
+    }
+}
+```
+
+### Routing Decision Tree
+```python
+def route_query(self, query_analysis):
+    """Enhanced routing logic with fallback strategies"""
+    
+    intent = query_analysis.intent
+    complexity = query_analysis.complexity
+    confidence = query_analysis.confidence
+    
+    # High confidence, single intent
+    if confidence > 0.8 and len(query_analysis.intents) == 1:
+        return self.routing_rules[intent]
+    
+    # Multi-intent queries require coordination
+    elif len(query_analysis.intents) > 1:
+        return "multi_agent_coordination"
+    
+    # Low confidence, route to generalist
+    elif confidence < 0.6:
+        return self.fallback_agent
+    
+    # Complex queries to specialist
+    elif complexity == "complex":
+        if "methodology" in query_analysis.keywords:
+            return "knowledge_specialist"
+        else:
+            return "cip_engineer"
+    
+    # Default routing
+    else:
+        return self.routing_rules.get(intent, self.fallback_agent)
+```
+
+---
+
+## 🔧 CIP Engineer Agent
+
+### Purpose and Responsibilities
+Technical expert focused on vacuum pump maintenance, risk assessment, troubleshooting, and predictive analytics.
+
+### Configuration
+```yaml
+# config/agents/cip_engineer.yaml
+cip_engineer:
+  enabled: true
+  model: "gpt-4-turbo-preview"
+  temperature: 0.1
+  max_tokens: 2000
+  
+  expertise_areas:
+    - pump_technology
+    - risk_assessment
+    - predictive_maintenance
+    - troubleshooting
+    - performance_analysis
+    
+  knowledge_access:
+    real_time_data: true
+    historical_trends: true
+    maintenance_procedures: true
+    failure_modes: true
+    
+  tools:
+    - asset_health_analyzer
+    - critical_asset_identifier
+    - maintenance_procedure_lookup
+    - failure_mode_analyzer
+    - performance_trend_calculator
+    
+  response_format:
+    include_technical_details: true
+    include_action_items: true
+    include_risk_assessment: true
+    include_timeline: true
+    
+  escalation_triggers:
+    business_impact_questions: true
+    multi_site_coordination: true
+    budget_approval_needed: true
+```
+
+### Specialized Tools
+```python
+class CIPEngineerTools:
+    """Specialized tools for CIP Engineer Agent"""
+    
+    @tool
+    def get_critical_assets(self, risk_threshold: float = 0.8) -> List[Dict]:
+        """Identify assets requiring immediate attention"""
+        query = """
+        MATCH (asset:Asset)-[:HAS_CURRENT_HEALTH]->(health:HealthMetrics)
+        WHERE health.health_index < $threshold OR health.rul_days < 30
+        RETURN asset.id, asset.model, asset.location,
+               health.health_index, health.rul_days, health.failure_likelihood
+        ORDER BY health.health_index ASC, health.rul_days ASC
+        """
+        return self.kg_client.execute_query(query, threshold=risk_threshold)
+    
+    @tool
+    def analyze_pump_degradation(self, asset_id: str, days: int = 30) -> Dict:
+        """Analyze pump degradation patterns over time"""
+        query = """
+        MATCH (asset:Asset {id: $asset_id})-[:HAS_HEALTH_HISTORY]->(history:HealthHistory)
+        WHERE history.timestamp > datetime() - duration('P' + $days + 'D')
+        RETURN history.timestamp, history.health_index, history.trend_slope
+        ORDER BY history.timestamp DESC
+        """
+        return self.kg_client.execute_query(query, asset_id=asset_id, days=days)
+    
+    @tool
+    def get_maintenance_procedures(self, pump_model: str, issue_type: str = None) -> List[Dict]:
+        """Retrieve relevant maintenance procedures"""
+        query = """
+        MATCH (procedure:Procedure)-[:APPLIES_TO]->(model:PumpModel {name: $model})
+        WHERE $issue_type IS NULL OR procedure.issue_type CONTAINS $issue_type
+        RETURN procedure.name, procedure.steps, procedure.duration, 
+               procedure.required_tools, procedure.skill_level
+        ORDER BY procedure.complexity ASC
+        """
+        return self.kg_client.execute_query(query, model=pump_model, issue_type=issue_type)
+```
+
+### Response Templates
+```python
+# CIP Engineer response templates
+RESPONSE_TEMPLATES = {
+    "risk_assessment": """
+    ## Risk Assessment Results
+    
+    **Critical Finding**: {critical_finding}
+    
+    **Assets Requiring Attention**:
+    {critical_assets_list}
+    
+    **Technical Analysis**:
+    {technical_analysis}
+    
+    **Immediate Actions Required**:
+    {action_items}
+    
+    **Risk Mitigation Strategy**:
+    {mitigation_strategy}
+    """,
+    
+    "troubleshooting": """
+    ## Troubleshooting Analysis
+    
+    **Problem Identification**: {problem_summary}
+    
+    **Most Likely Causes**:
+    {probable_causes}
+    
+    **Diagnostic Steps**:
+    {diagnostic_procedure}
+    
+    **Repair Recommendations**:
+    {repair_recommendations}
+    
+    **Prevention Measures**:
+    {prevention_strategy}
+    """
+}
+```
+
+---
+
+## 👔 Subfab Manager Agent
+
+### Purpose and Responsibilities
+Business-focused agent handling operational planning, cost analysis, resource management, and production impact assessment.
+
+### Configuration
+```yaml
+# config/agents/subfab_manager.yaml
+subfab_manager:
+  enabled: true
+  model: "gpt-4-turbo-preview"
+  temperature: 0.2
+  max_tokens: 1500
+  
+  expertise_areas:
+    - business_impact_analysis
+    - resource_planning
+    - cost_optimization
+    - production_scheduling
+    - sla_management
+    
+  knowledge_access:
+    cost_models: true
+    production_schedules: true
+    resource_availability: true
+    sla_metrics: true
+    
+  tools:
+    - cost_calculator
+    - resource_planner
+    - sla_tracker
+    - production_impact_analyzer
+    - roi_calculator
+    
+  response_format:
+    include_cost_analysis: true
+    include_timeline: true
+    include_resource_requirements: true
+    include_business_justification: true
+    
+  kpi_tracking:
+    - production_uptime
+    - maintenance_costs
+    - equipment_utilization
+    - sla_compliance
+```
+
+### Business Analysis Tools
+```python
+class SubfabManagerTools:
+    """Business-focused tools for Subfab Manager Agent"""
+    
+    @tool
+    def calculate_downtime_cost(self, asset_id: str, downtime_hours: float) -> Dict:
+        """Calculate business impact of downtime"""
+        query = """
+        MATCH (asset:Asset {id: $asset_id})-[:SERVES]->(tool:ProcessTool)
+        MATCH (tool)-[:HAS_PRODUCTION_RATE]->(rate:ProductionRate)
+        MATCH (tool)-[:HAS_COST_MODEL]->(cost:CostModel)
+        RETURN rate.wafers_per_hour * $hours * cost.revenue_per_wafer as revenue_loss,
+               cost.downtime_cost_per_hour * $hours as direct_cost,
+               cost.cascade_impact_multiplier as cascade_factor
+        """
+        return self.kg_client.execute_query(query, asset_id=asset_id, hours=downtime_hours)
+    
+    @tool
+    def analyze_resource_requirements(self, maintenance_plan: List[Dict]) -> Dict:
+        """Analyze resource requirements for maintenance plan"""
+        total_hours = sum(task['duration_hours'] for task in maintenance_plan)
+        required_skills = set(task['skill_required'] for task in maintenance_plan)
+        
+        query = """
+        MATCH (tech:Technician)-[:HAS_SKILL]->(skill:Skill)
+        WHERE skill.name IN $skills
+        RETURN tech.name, tech.availability, collect(skill.name) as skills
+        """
+        available_techs = self.kg_client.execute_query(query, skills=list(required_skills))
+        
+        return {
+            "total_hours": total_hours,
+            "required_skills": list(required_skills),
+            "available_technicians": available_techs,
+            "estimated_completion": self._calculate_completion_time(maintenance_plan, available_techs)
+        }
+    
+    @tool
+    def track_sla_performance(self, time_period: str = "30d") -> Dict:
+        """Track SLA performance metrics"""
+        query = """
+        MATCH (sla:SLAMetric)
+        WHERE sla.period = $period
+        RETURN sla.uptime_target, sla.uptime_actual,
+               sla.response_time_target, sla.response_time_actual,
+               sla.penalty_cost, sla.compliance_status
+        """
+        return self.kg_client.execute_query(query, period=time_period)
+```
+
+### Cost Analysis Framework
+```python
+class CostAnalysisFramework:
+    """Comprehensive cost analysis for business decisions"""
+    
+    def calculate_total_cost_of_ownership(self, asset_id: str, years: int = 5):
+        """Calculate TCO including all cost factors"""
+        cost_components = {
+            "acquisition_cost": self._get_acquisition_cost(asset_id),
+            "maintenance_cost": self._get_maintenance_cost(asset_id, years),
+            "energy_cost": self._get_energy_cost(asset_id, years),
+            "downtime_cost": self._get_expected_downtime_cost(asset_id, years),
+            "end_of_life_value": self._get_residual_value(asset_id, years)
+        }
+        
+        total_tco = sum(cost_components.values()) - cost_components["end_of_life_value"]
+        
+        return {
+            "total_tco": total_tco,
+            "annual_tco": total_tco / years,
+            "cost_breakdown": cost_components,
+            "cost_per_operating_hour": total_tco / (years * 8760)  # Assuming 24/7 operation
+        }
+```
+
+---
+
+## 🔒 Service Admin Agent
+
+### Purpose and Responsibilities
+System administration focused on user management, system configuration, security, and technical support.
+
+### Configuration
+```yaml
+# config/agents/service_admin.yaml
+service_admin:
+  enabled: true
+  model: "gpt-4-turbo-preview"
+  temperature: 0.1
+  max_tokens: 1000
+  
+  expertise_areas:
+    - system_administration
+    - user_management
+    - security_configuration
+    - troubleshooting
+    - performance_monitoring
+    
+  knowledge_access:
+    system_documentation: true
+    configuration_guides: true
+    security_procedures: true
+    performance_metrics: true
+    
+  tools:
+    - user_manager
+    - system_health_checker
+    - configuration_validator
+    - performance_analyzer
+    - security_auditor
+    
+  response_format:
+    include_step_by_step: true
+    include_security_considerations: true
+    include_validation_steps: true
+    
+  permissions:
+    read_system_config: true
+    modify_user_permissions: true
+    access_audit_logs: true
+    system_health_monitoring: true
+```
+
+### Administrative Tools
+```python
+class ServiceAdminTools:
+    """Administrative tools for Service Admin Agent"""
+    
+    @tool
+    def check_system_health(self) -> Dict:
+        """Comprehensive system health check"""
+        health_checks = {
+            "neo4j_cluster": self._check_neo4j_cluster(),
+            "api_services": self._check_api_services(),
+            "knowledge_sync": self._check_knowledge_sync(),
+            "agent_performance": self._check_agent_performance(),
+            "resource_utilization": self._check_resource_utilization()
+        }
+        
+        overall_status = "healthy" if all(check["status"] == "healthy" for check in health_checks.values()) else "issues"
+        
+        return {
+            "overall_status": overall_status,
+            "component_health": health_checks,
+            "recommendations": self._generate_health_recommendations(health_checks)
+        }
+    
+    @tool
+    def manage_user_permissions(self, user_id: str, action: str, permissions: List[str] = None) -> Dict:
+        """Manage user permissions and roles"""
+        if action == "grant":
+            return self._grant_permissions(user_id, permissions)
+        elif action == "revoke":
+            return self._revoke_permissions(user_id, permissions)
+        elif action == "list":
+            return self._list_user_permissions(user_id)
+        else:
+            raise ValueError(f"Unknown action: {action}")
+    
+    @tool
+    def validate_configuration(self, config_section: str = "all") -> Dict:
+        """Validate system configuration"""
+        validation_results = {}
+        
+        if config_section in ["all", "security"]:
+            validation_results["security"] = self._validate_security_config()
+        
+        if config_section in ["all", "database"]:
+            validation_results["database"] = self._validate_database_config()
+            
+        if config_section in ["all", "agents"]:
+            validation_results["agents"] = self._validate_agent_config()
+        
+        return validation_results
+```
+
+---
+
+## 📚 Knowledge Specialist Agent
+
+### Purpose and Responsibilities
+Domain expert providing comprehensive knowledge about methodologies, frameworks, standards, and detailed procedures.
+
+### Configuration
+```yaml
+# config/agents/knowledge_specialist.yaml
+knowledge_specialist:
+  enabled: true
+  model: "gpt-4-turbo-preview"
+  temperature: 0.05  # Very low for accuracy
+  max_tokens: 2500
+  
+  expertise_areas:
+    - domain_methodologies
+    - industry_standards
+    - calculation_frameworks
+    - best_practices
+    - regulatory_compliance
+    
+  knowledge_access:
+    complete_knowledge_graph: true
+    methodology_documents: true
+    standards_database: true
+    historical_procedures: true
+    
+  tools:
+    - methodology_lookup
+    - standards_reference
+    - procedure_validator
+    - calculation_explainer
+    - best_practice_recommender
+    
+  response_format:
+    include_detailed_explanations: true
+    include_step_by_step_procedures: true
+    include_references: true
+    include_compliance_notes: true
+    
+  quality_standards:
+    minimum_confidence: 0.9
+    require_source_attribution: true
+    validate_against_standards: true
+```
+
+### Knowledge Analysis Tools
+```python
+class KnowledgeSpecialistTools:
+    """Comprehensive knowledge analysis tools"""
+    
+    @tool
+    def explain_methodology(self, methodology_name: str, detail_level: str = "comprehensive") -> Dict:
+        """Provide detailed explanation of methodologies"""
+        query = """
+        MATCH (method:Methodology {name: $name})
+        MATCH (method)-[:HAS_STEP]->(step:ProcedureStep)
+        MATCH (method)-[:BASED_ON]->(standard:Standard)
+        MATCH (method)-[:REQUIRES]->(input:Input)
+        MATCH (method)-[:PRODUCES]->(output:Output)
+        RETURN method, collect(step) as steps, collect(standard) as standards,
+               collect(input) as inputs, collect(output) as outputs
+        ORDER BY step.order
+        """
+        
+        methodology_data = self.kg_client.execute_query(query, name=methodology_name)
+        
+        return {
+            "methodology": methodology_data["method"],
+            "detailed_steps": methodology_data["steps"],
+            "required_inputs": methodology_data["inputs"],
+            "expected_outputs": methodology_data["outputs"],
+            "applicable_standards": methodology_data["standards"],
+            "implementation_notes": self._get_implementation_notes(methodology_name),
+            "validation_criteria": self._get_validation_criteria(methodology_name)
+        }
+    
+    @tool
+    def lookup_calculation_method(self, calculation_name: str) -> Dict:
+        """Provide detailed calculation procedures"""
+        query = """
+        MATCH (calc:Calculation {name: $name})
+        MATCH (calc)-[:HAS_FORMULA]->(formula:Formula)
+        MATCH (calc)-[:USES_PARAMETER]->(param:Parameter)
+        MATCH (calc)-[:VALIDATED_BY]->(validation:ValidationRule)
+        RETURN calc.description, formula.expression, formula.units,
+               collect(param) as parameters, collect(validation) as validations
+        """
+        
+        calc_data = self.kg_client.execute_query(query, name=calculation_name)
+        
+        return {
+            "description": calc_data["description"],
+            "formula": calc_data["expression"],
+            "units": calc_data["units"],
+            "parameters": calc_data["parameters"],
+            "validation_rules": calc_data["validations"],
+            "example_calculation": self._generate_example_calculation(calculation_name),
+            "common_errors": self._get_common_calculation_errors(calculation_name)
+        }
+    
+    @tool
+    def reference_standards(self, domain: str, standard_type: str = None) -> List[Dict]:
+        """Reference applicable industry standards"""
+        query = """
+        MATCH (standard:Standard)-[:APPLIES_TO]->(domain:Domain {name: $domain})
+        WHERE $type IS NULL OR standard.type = $type
+        RETURN standard.name, standard.version, standard.description,
+               standard.compliance_level, standard.last_updated
+        ORDER BY standard.compliance_level DESC, standard.last_updated DESC
+        """
+        
+        return self.kg_client.execute_query(query, domain=domain, type=standard_type)
+```
+
+### Comprehensive Response Framework
+```python
+class KnowledgeResponse:
+    """Framework for comprehensive knowledge responses"""
+    
+    def generate_methodology_response(self, query: str, methodology_data: Dict) -> str:
+        """Generate comprehensive methodology explanation"""
+        
+        template = """
+        # {methodology_name}
+        
+        ## Overview
+        {overview_description}
+        
+        ## Detailed Procedure
+        {step_by_step_procedure}
+        
+        ## Required Inputs
+        {input_specifications}
+        
+        ## Calculation Methods
+        {calculation_details}
+        
+        ## Validation Criteria
+        {validation_requirements}
+        
+        ## Applicable Standards
+        {standards_references}
+        
+        ## Implementation Notes
+        {implementation_guidance}
+        
+        ## Common Pitfalls
+        {common_errors_and_solutions}
+        
+        ## Related Procedures
+        {related_methodologies}
+        """
+        
+        return template.format(**methodology_data)
+```
+
+---
+
+## 🔄 Multi-Agent Coordination
+
+### Coordination Scenarios
+```yaml
+# Multi-agent coordination rules
+coordination_rules:
+  business_technical_hybrid:
+    trigger_conditions:
+      - business_impact_query: true
+      - technical_analysis_required: true
+    agents_involved: ["cip_engineer", "subfab_manager"]
+    coordination_type: "sequential"
+    
+  complex_methodology_question:
+    trigger_conditions:
+      - methodology_query: true
+      - implementation_guidance_needed: true
+    agents_involved: ["knowledge_specialist", "cip_engineer"]
+    coordination_type: "parallel"
+    
+  system_wide_issue:
+    trigger_conditions:
+      - multiple_assets_affected: true
+      - system_configuration_involved: true
+    agents_involved: ["cip_engineer", "service_admin", "subfab_manager"]
+    coordination_type: "hierarchical"
+```
+
+### Response Synthesis
+```python
+class ResponseSynthesizer:
+    """Combine responses from multiple agents"""
+    
+    def synthesize_responses(self, agent_responses: Dict[str, Dict]) -> Dict:
+        """Intelligently combine multiple agent responses"""
+        
+        synthesis_strategy = self._determine_synthesis_strategy(agent_responses)
+        
+        if synthesis_strategy == "technical_priority":
+            return self._technical_priority_synthesis(agent_responses)
+        elif synthesis_strategy == "business_priority":
+            return self._business_priority_synthesis(agent_responses)
+        elif synthesis_strategy == "balanced":
+            return self._balanced_synthesis(agent_responses)
+        else:
+            return self._sequential_synthesis(agent_responses)
+    
+    def _balanced_synthesis(self, responses: Dict[str, Dict]) -> Dict:
+        """Create balanced response incorporating all perspectives"""
+        
+        synthesized_response = {
+            "executive_summary": self._create_executive_summary(responses),
+            "technical_analysis": responses.get("cip_engineer", {}).get("response", ""),
+            "business_impact": responses.get("subfab_manager", {}).get("response", ""),
+            "methodology_guidance": responses.get("knowledge_specialist", {}).get("response", ""),
+            "system_considerations": responses.get("service_admin", {}).get("response", ""),
+            "action_items": self._consolidate_action_items(responses),
+            "recommendations": self._prioritize_recommendations(responses)
+        }
+        
+        return synthesized_response
+```
+
+---
+
+## 📊 Agent Performance Monitoring
+
+### Performance Metrics
+```yaml
+# Agent performance tracking
+performance_metrics:
+  response_time:
+    target: 5  # seconds
+    warning_threshold: 8
+    critical_threshold: 15
+    
+  confidence_score:
+    target: 0.8
+    warning_threshold: 0.7
+    critical_threshold: 0.6
+    
+  user_satisfaction:
+    target: 4.5  # out of 5
+    warning_threshold: 4.0
+    critical_threshold: 3.5
+    
+  escalation_rate:
+    target: 0.1  # 10%
+    warning_threshold: 0.15
+    critical_threshold: 0.25
+```
+
+### Performance Optimization
+```python
+class AgentPerformanceOptimizer:
+    """Optimize agent performance based on metrics"""
+    
+    def optimize_agent_performance(self, agent_name: str, performance_data: Dict):
+        """Implement performance optimizations"""
+        
+        optimizations = []
+        
+        # Response time optimization
+        if performance_data["avg_response_time"] > 8:
+            optimizations.append(self._optimize_response_time(agent_name))
+        
+        # Confidence score optimization
+        if performance_data["avg_confidence"] < 0.7:
+            optimizations.append(self._optimize_confidence(agent_name))
+        
+        # Knowledge access optimization
+        if performance_data["knowledge_access_time"] > 3:
+            optimizations.append(self._optimize_knowledge_access(agent_name))
+        
+        return optimizations
+    
+    def _optimize_response_time(self, agent_name: str):
+        """Optimize agent response time"""
+        return {
+            "optimization_type": "response_time",
+            "actions": [
+                "increase_worker_threads",
+                "implement_response_caching",
+                "optimize_knowledge_queries",
+                "reduce_context_window_size"
+            ]
+        }
+```
+
+---
+
+## ⚙️ Advanced Configuration
+
+### Custom Agent Development
+```python
+class CustomAgentTemplate:
+    """Template for creating new specialized agents"""
+    
+    def __init__(self, agent_config: Dict):
+        self.name = agent_config["name"]
+        self.expertise_areas = agent_config["expertise_areas"]
+        self.tools = self._initialize_tools(agent_config["tools"])
+        self.knowledge_access = agent_config["knowledge_access"]
+        
+    def process_query(self, query: str, context: Dict) -> Dict:
+        """Main query processing method"""
+        
+        # 1. Analyze query relevance
+        relevance = self._assess_query_relevance(query)
+        
+        if relevance < 0.6:
+            return {"escalate": True, "reason": "low_relevance"}
+        
+        # 2. Gather relevant knowledge
+        knowledge_context = self._gather_knowledge(query)
+        
+        # 3. Apply specialized tools
+        tool_results = self._apply_tools(query, knowledge_context)
+        
+        # 4. Generate response
+        response = self._generate_response(query, knowledge_context, tool_results)
+        
+        # 5. Validate response quality
+        quality_score = self._validate_response_quality(response)
+        
+        return {
+            "response": response,
+            "confidence": quality_score,
+            "sources": knowledge_context["sources"],
+            "tools_used": list(tool_results.keys())
+        }
+```
+
+### Agent Testing Framework
+```python
+class AgentTestingFramework:
+    """Comprehensive testing for agent functionality"""
+    
+    def test_agent_performance(self, agent_name: str, test_suite: List[Dict]):
+        """Run comprehensive agent tests"""
+        
+        results = {
+            "accuracy": self._test_accuracy(agent_name, test_suite),
+            "response_time": self._test_response_time(agent_name, test_suite),
+            "consistency": self._test_consistency(agent_name, test_suite),
+            "edge_cases": self._test_edge_cases(agent_name, test_suite)
+        }
+        
+        overall_score = self._calculate_overall_score(results)
+        
+        return {
+            "overall_score": overall_score,
+            "detailed_results": results,
+            "recommendations": self._generate_test_recommendations(results)
+        }
+```
+
+---
+
+*For implementation details and troubleshooting, see [Agent Troubleshooting](Agent-Troubleshooting). For performance optimization, see [Agent Performance Tuning](Agent-Performance-Tuning).*
