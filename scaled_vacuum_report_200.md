@@ -41,7 +41,7 @@ pie title IoT Asset Status (200 Connected Assets)
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph TB
     subgraph "Fab 1 - Advanced Node Production"
-
+        inset[Line breaks <br />work in <br />Insets]
         subgraph "Bay 1-3: Etch Lines" 
             F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
         end
