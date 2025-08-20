@@ -1,4 +1,4 @@
-# CIP Engineer Competency Questions for Service Technicians
+# Inexperienced CIP Engineer Competency Questions
 *Knowledge Transfer Framework for Intelligent Assistant Development*
 
 ---
