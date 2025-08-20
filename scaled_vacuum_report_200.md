@@ -41,40 +41,44 @@ pie title IoT Asset Status (200 Connected Assets)
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph TB
     subgraph "Fab 1 - Advanced Node Production"
-    spacer["<br/><br/>"]:::invisible
-        subgraph "Bay 1-3: Etch Lines" 
-            F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
-        end
-        subgraph "Bay 4-6: PVD/CVD"
-            F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
-        end
-        subgraph "Bay 7-9: Support" 
-            F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
-        end
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 1-3: Etch Lines" 
+                F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
+            end
+            subgraph "Bay 4-6: PVD/CVD"
+                F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
+            end
+            subgraph "Bay 7-9: Support" 
+                F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
+            end
     end
     
     subgraph "Fab 2 - Mature Node Production"
-    spacer["<br/><br/>"]:::invisible
-        subgraph "Bay 10-12: Production"
-            F2B1["🔴 1 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
-        end
-        subgraph "Bay 13-15: Support"
-            F2B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 8 Medium"]
-        end
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 10-12: Production"
+                F2B1["🔴 1 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
+            end
+            subgraph "Bay 13-15: Support"
+                F2B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 8 Medium"]
+            end
     end
     
     subgraph "Fab 3 - R&D/Pilot"
-    spacer["<br/><br/>"]:::invisible
-        subgraph "Bay 16-18: Development"
-            F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
-        end
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 16-18: Development"
+                F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
+            end
     end
-    
+
+    classDef invisible fill:none,stroke:none,stroke-width:0px
     classDef critical fill:#ff6600,stroke:#333,stroke-width:3px,color:#fff
     classDef high fill:#ff9900,stroke:#333,stroke-width:2px,color:#fff
     classDef medium fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
     classDef lowrisk fill:#4CAF50,stroke:#333,stroke-width:1px,color:#fff
-    classDef invisible fill:none,stroke:none,stroke-width:0px
+    
 
     
     class F1B1,F2B1 critical
