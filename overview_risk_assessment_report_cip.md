@@ -250,24 +250,22 @@ xychart-beta
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
-gantt
-    title "Fleet Recovery Action Plan"
-    dateFormat  YYYY-MM-DD
-    axisFormat %m-%d
-    
+timeline
+    title Fleet Recovery Action Plan
+
     section Emergency Response (Week 1)
-    Critical Asset Replacement (8 units)    :crit, emergency, 2025-08-12, 7d
-    Emergency Spare Procurement             :crit, spares, 2025-08-12, 3d
-    Production Rerouting                    :active, reroute, 2025-08-12, 7d
-    
+        2025-08-12 : Critical Asset Replacement (8 units)
+        2025-08-12 : Emergency Spare Procurement (3d)
+        2025-08-12 : Production Rerouting (7d)
+
     section Preventive Actions (Week 2-3)
-    High Risk Maintenance (15 assets)       :active, maint, 2025-08-19, 14d
-    Medium Risk Enhanced Monitoring         :active, monitor, 2025-08-19, 21d
-    
+        2025-08-19 : High Risk Maintenance (15 assets, 14d)
+        2025-08-19 : Medium Risk Enhanced Monitoring (21d)
+
     section Strategic Initiatives (Week 3-4)
-    Predictive Analytics Expansion          :strategic, predict, 2025-08-26, 14d
-    Fleet Optimization Study                :strategic, optimize, 2025-08-26, 21d
-    Supplier Performance Review             :strategic, supplier, 2025-08-26, 14d
+        2025-08-26 : Predictive Analytics Expansion (14d)
+        2025-08-26 : Fleet Optimization Study (21d)
+        2025-08-26 : Supplier Performance Review (14d)
 ```
 
 ### Resource Allocation Summary
