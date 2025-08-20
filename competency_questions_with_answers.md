@@ -1,4 +1,4 @@
-# Competency Questions with Answers and Knowledge Graph Context
+# Advanced CIP Engineer Competency Questions with Answers and Knowledge Graph Context
 
 ## Overview
 This document provides detailed answers to the 70 competency questions along with explanations of how these answers are derived from the risk assessment report and underlying knowledge graph relationships.
