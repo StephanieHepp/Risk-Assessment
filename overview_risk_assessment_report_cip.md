@@ -169,19 +169,19 @@ xychart-beta
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph LR
-    subgraph "7nm Production Lines (HIGH VALUE)"
+    subgraph "7nm Production Lines"
         L1["Line 1<br/>🔴 2 Critical<br/>🟠 1 High"]
         L2["Line 2<br/>🔴 1 Critical<br/>🟠 2 High"]
         L3["Line 3<br/>🟡 3 Medium<br/>🟢 2 Low"]
     end
     
-    subgraph "14nm Production Lines (MEDIUM VALUE)"
+    subgraph "14nm Production Lines"
         L4["Line 4<br/>🔴 2 Critical<br/>🟡 4 Medium"]
         L5["Line 5<br/>🟠 3 High<br/>🟡 2 Medium"]
         L6["Line 6<br/>🟡 5 Medium<br/>🟢 8 Low"]
     end
     
-    subgraph "28nm+ Production Lines (STABLE VALUE)"
+    subgraph "28nm+ Production Lines"
         L7["Line 7-12<br/>🔴 1 Critical<br/>🟠 6 High<br/>🟡 25 Medium"]
     end
     
@@ -203,7 +203,7 @@ graph LR
 | Cost Category | Monthly ($K) | YTD Total ($K) | vs. Budget | Trend |
 |---------------|--------------|----------------|------------|-------|
 | **Emergency Repairs** | 485 | 3,200 | ![Over](https://img.shields.io/badge/+89%25-red) | ↗️ Increasing |
-| **Planned Maintenance** | 245 | 1,850 | ![Under](https://img.shields.io/badge/-12%25-green) | ↘️ Decreasing |
+| **Planned Maintenance** | 245 | 1,850 | ![Under](https://img.shields.io/badge/−12%25-green) | ↘️ Decreasing |
 | **Spare Parts Inventory** | 180 | 1,440 | ![On Target](https://img.shields.io/badge/Target-blue) | ➡️ Stable |
 | **Production Losses** | 1,250 | 8,900 | ![Over](https://img.shields.io/badge/+145%25-red) | ↗️ Critical |
 
