@@ -27,7 +27,7 @@
 | Parameter | Current | Threshold | Status | 30-Day Trend |
 |-----------|---------|-----------|--------|--------------|
 | **Operating Temperature** | 73°C | 65°C | ![Critical](https://img.shields.io/badge/+12%25-yellow) | ↗️ +8°C |
-| **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-orange) | ↗️ +0.45 mm/s |
+| **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-yellow) | ↗️ +0.45 mm/s |
 | **Power Consumption** | +22% | Baseline | ![Critical](https://img.shields.io/badge/+22%25-orange) | ↗️ +15% |
 | **Motor Current** | 8.9A | 8.0A | ![Exceeded](https://img.shields.io/badge/+11%25-yellow) | ↗️ +0.8A |
 | **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-yellow) | ↘️ -35 L/s |
