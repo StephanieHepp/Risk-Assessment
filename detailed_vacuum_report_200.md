@@ -26,11 +26,11 @@
 #### Technical Performance Metrics
 | Parameter | Current | Threshold | Status | 30-Day Trend |
 |-----------|---------|-----------|--------|--------------|
-| **Operating Temperature** | 73°C | 65°C | ![Critical](https://img.shields.io/badge/+12%25-red) | ↗️ +8°C |
-| **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-red) | ↗️ +0.45 mm/s |
-| **Power Consumption** | +22% | Baseline | ![Critical](https://img.shields.io/badge/+22%25-red) | ↗️ +15% |
-| **Motor Current** | 8.9A | 8.0A | ![Exceeded](https://img.shields.io/badge/+11%25-red) | ↗️ +0.8A |
-| **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-orange) | ↘️ -35 L/s |
+| **Operating Temperature** | 73°C | 65°C | ![Critical](https://img.shields.io/badge/+12%25-yellow) | ↗️ +8°C |
+| **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-orange) | ↗️ +0.45 mm/s |
+| **Power Consumption** | +22% | Baseline | ![Critical](https://img.shields.io/badge/+22%25-orange) | ↗️ +15% |
+| **Motor Current** | 8.9A | 8.0A | ![Exceeded](https://img.shields.io/badge/+11%25-yellow) | ↗️ +0.8A |
+| **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-yellow) | ↘️ -35 L/s |
 | **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/60%25_below-red) | ↘️ -25d |
 
 #### Alarm History (30 Days)
@@ -59,7 +59,7 @@
 #### Technical Performance Metrics
 | Parameter | Current | Threshold | Status | 30-Day Trend |
 |-----------|---------|-----------|--------|--------------|
-| **Pumping Speed** | 26.25 m³/h | 30 m³/h | ![Critical](https://img.shields.io/badge/-25%25-red) | ↘️ -8.75 m³/h |
-| **Motor Current** | 12.96A | 12.0A | ![Critical](https://img.shields.io/badge/+8%25-red) | ↗️ +0.96A |
-| **Oil Temperature** | 74°C | 70°C | ![Exceeded](https://img.shields.io/badge/+6%25-red) | ↗️ +4°C |
-| **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40%25-orange) | ↗️ +0.8 mbar |
+| **Pumping Speed** | 26.25 m³/h | 30 m³/h | ![Critical](https://img.shields.io/badge/-25%25-orange) | ↘️ -8.75 m³/h |
+| **Motor Current** | 12.96A | 12.0A | ![Critical](https://img.shields.io/badge/+8%25-yellow) | ↗️ +0.96A |
+| **Oil Temperature** | 74°C | 70°C | ![Exceeded](https://img.shields.io/badge/+6%25-yellow) | ↗️ +4°C |
+| **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40%25-red) | ↗️ +0.8 mbar |
