@@ -252,13 +252,12 @@ xychart-beta
 %%{init: {
   'theme':'base',
   'themeVariables': {
-    'primaryColor': '#1976d2',        /* Blau für Tasks */
-    'primaryTextColor': '#ffffff',    /* Weiße Schrift */
-    'primaryBorderColor': '#0d47a1',  /* Dunkler Rand */
-    'lineColor': '#000000',           /* Schwarze Zeitachse */
-    'tertiaryColor': '#f5f5f5',       /* Hellgrau für Section-Header */
-    'fontSize': '14px',
-    'fontFamily': 'Arial'
+    'primaryColor': '#1976d2',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#0d47a1',
+    'lineColor': '#000000',
+    'tertiaryColor': '#f5f5f5',
+    'seriesColors': ['#1976d2', '#1976d2', '#1976d2']  /* alle Sections gleich blau */
   }
 }}%%
 timeline
