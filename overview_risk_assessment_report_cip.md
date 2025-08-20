@@ -92,20 +92,14 @@ graph TB
 
 ## Exception-Based Critical Asset Reporting
 
-### Immediate Action Required (8 Critical Assets)
+### Immediate Action Required (2 Critical Assets)
 
-| Asset ID | Location | Risk Score | Failure Mode | Business Impact | Action Timeline |
-|----------|----------|------------|--------------|-----------------|-----------------|
-| **VP-001** | F1-Etch-Bay3 | ![Critical](https://img.shields.io/badge/89%25-red) | Bearing failure + overheating | $45K/hr, 7nm production | 24 hours |
-| **VP-007** | F1-LoadLock-T7 | ![Critical](https://img.shields.io/badge/87%25-red) | Scroll degradation | $25K/hr, multi-tool impact | 48 hours |
-| **VP-023** | F1-PVD-Chamber2 | ![Critical](https://img.shields.io/badge/85%25-red) | Motor current spike | $18K/hr, metal deposition | 48 hours |
-| **VP-089** | F2-Etch-Bay11 | ![Critical](https://img.shields.io/badge/84%25-red) | Vibration excessive | $22K/hr, mature node | 72 hours |
-| **VP-134** | F2-CVD-Chamber5 | ![Critical](https://img.shields.io/badge/83%25-red) | Temperature alarm | $15K/hr, insulator dep | 72 hours |
-| **VP-167** | F2-Support-Rough3 | ![Critical](https://img.shields.io/badge/82%25-red) | Oil contamination | $8K/hr, roughing system | 96 hours |
-| **VP-198** | F3-Dev-Proto1 | ![Critical](https://img.shields.io/badge/81%25-red) | Performance decline | $5K/hr, R&D impact | 96 hours |
-| **VP-045** | F1-CVD-Bay5 | ![Critical](https://img.shields.io/badge/80%25-red) | MTBF critical | $12K/hr, dielectric | 120 hours |
+| Asset ID | Location | Risk Score | Failure Mode | Action Timeline |
+|----------|----------|------------|--------------|-----------------|
+| **VP-001** | F1-Etch-Bay3 | ![Critical](https://img.shields.io/badge/89%25-red) | Bearing failure + overheating | 24 hours |
+| **VP-007** | F1-LoadLock-T7 | ![Critical](https://img.shields.io/badge/87%25-red) | Scroll degradation | 48 hours |
 
-**Critical Summary**: 8 assets require emergency replacement within 5 days. Total exposure: $150K/hour downtime risk. Spare inventory status: 6 available, 2 on emergency order (24-48hr delivery).
+**Critical Summary**: 2 assets require emergency replacement within 5 days. Spare inventory status: 6 available, 2 on emergency order (24-48hr delivery).
 
 ### High Risk Trending (15 Assets - Selected Top 5)
 
