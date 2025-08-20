@@ -120,7 +120,7 @@ graph TB
 ### Risk Distribution by Age Groups
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 xychart-beta
     title "Fleet Risk Profile by Age Groups"
     x-axis ["0-1 Years (45 assets)", "1-2 Years (52 assets)", "2-3 Years (48 assets)", "3-4 Years (35 assets)", "4-5 Years (20 assets)"]
@@ -148,7 +148,7 @@ pie title "Critical/High Risk by Pump Type"
 ### Monthly Fleet Reliability Trend
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 xychart-beta
     title "Fleet MTBF and Availability Trends (8-Month View)"
     x-axis ["Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025"]
@@ -230,7 +230,7 @@ pie title "Primary Failure Modes - Critical/High Risk Assets (23 Total)"
 ### Risk Velocity Tracking
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 xychart-beta
     title "Risk Acceleration Patterns (30-Day Velocity)"
     x-axis ["Week 1", "Week 2", "Week 3", "Week 4"]
@@ -249,7 +249,7 @@ xychart-beta
 ### 30-Day Critical Path
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 timeline
     title Fleet Recovery Action Plan
 
