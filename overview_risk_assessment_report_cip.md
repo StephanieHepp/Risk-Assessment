@@ -167,22 +167,22 @@ xychart-beta
 ### Process Line Risk Matrix
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph LR
     subgraph "7nm Production Lines (HIGH VALUE)"
-        L1["Line 1<br/>🔴 2 Critical<br/>🟠 1 High<br/>Revenue: $2.1M/day"]
-        L2["Line 2<br/>🔴 1 Critical<br/>🟠 2 High<br/>Revenue: $1.8M/day"]
-        L3["Line 3<br/>🟡 3 Medium<br/>🟢 2 Low<br/>Revenue: $1.9M/day"]
+        L1["Line 1<br/>🔴 2 Critical<br/>🟠 1 High"]
+        L2["Line 2<br/>🔴 1 Critical<br/>🟠 2 High"]
+        L3["Line 3<br/>🟡 3 Medium<br/>🟢 2 Low"]
     end
     
     subgraph "14nm Production Lines (MEDIUM VALUE)"
-        L4["Line 4<br/>🔴 2 Critical<br/>🟡 4 Medium<br/>Revenue: $950K/day"]
-        L5["Line 5<br/>🟠 3 High<br/>🟡 2 Medium<br/>Revenue: $890K/day"]
-        L6["Line 6<br/>🟡 5 Medium<br/>🟢 8 Low<br/>Revenue: $920K/day"]
+        L4["Line 4<br/>🔴 2 Critical<br/>🟡 4 Medium"]
+        L5["Line 5<br/>🟠 3 High<br/>🟡 2 Medium"]
+        L6["Line 6<br/>🟡 5 Medium<br/>🟢 8 Low"]
     end
     
     subgraph "28nm+ Production Lines (STABLE VALUE)"
-        L7["Line 7-12<br/>🔴 1 Critical<br/>🟠 6 High<br/>🟡 25 Medium<br/>Revenue: $2.8M/day"]
+        L7["Line 7-12<br/>🔴 1 Critical<br/>🟠 6 High<br/>🟡 25 Medium"]
     end
     
     classDef critical fill:#ff6600,stroke:#333,stroke-width:3px,color:#fff
