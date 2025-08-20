@@ -1,4 +1,4 @@
-# Competency Questions
+# Advanced CIP Engineer Competency Questions
 
 ## Overview
 This document contains 70 competency questions that a CIP (Continuous Improvement) engineer would ask when reviewing vacuum pump risk assessment reports. These questions are designed to validate the completeness and effectiveness of a knowledge graph for supporting CIP engineer decision-making in semiconductor manufacturing environments.
