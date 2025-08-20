@@ -28,12 +28,12 @@ pie title Fleet Risk Distribution (200 Assets)
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
 pie title IoT Asset Status (200 Connected Assets)
-    "Running Normal - 134 Assets" : 134
+    "Running Normal - 134 Assets" : 140
     "Warning Status - 58 Assets" : 58
     "Alarm Status - 2 Assets" : 2
 ```
 
-**IoT Health**: 67% of fleet operating normally, 29% showing warnings, 4% in alarm state. All alarm-status assets correlate with critical risk category, confirming our risk assessment accuracy.
+**IoT Health**: 70% of fleet operating normally, 29% showing warnings, 1% in alarm state. All alarm-status assets correlate with critical risk category, confirming our risk assessment accuracy.
 
 ### Business Impact Summary
 | Metric | Value | Status | Trend |
