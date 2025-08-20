@@ -42,19 +42,19 @@ pie title IoT Asset Status (200 Connected Assets)
 graph TB
     subgraph "Fab 1 - Advanced Node Production"
         subgraph "Bay 1-3: Etch Lines"
-            F1B1["🔴 3 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
+            F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
         end
         subgraph "Bay 4-6: PVD/CVD"
             F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
         end
         subgraph "Bay 7-9: Support"
-            F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 15 Low"]
+            F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
         end
     end
     
     subgraph "Fab 2 - Mature Node Production"
         subgraph "Bay 10-12: Production"
-            F2B1["🔴 2 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
+            F2B1["🔴 1 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
         end
         subgraph "Bay 13-15: Support"
             F2B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 8 Medium"]
