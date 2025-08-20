@@ -1,9 +1,8 @@
-# Detailed Vacuum Pump Fleet Risk Assessment Report
+# Detailed Risk Assessment Report for CIP Engineers
 **Fab: Phoenix Semiconductor - Multi-Fab Enterprise**  
 **Report Date: August 12, 2025**  
 **Assessment Period: Next 30 Days**  
 **Fleet Size: 200 Active Assets**  
-**Report Type: Detailed Analysis for CIP Engineers**
 
 ---
 
@@ -15,7 +14,15 @@
 
 ---
 
-## Section 1: Critical Risk Assets (8 Assets) - Detailed Analysis
+## Alert Summary
+
+| Priority | Count | Assets |
+|----------|-------|--------|
+| ![Critical](https://img.shields.io/badge/URGENT-red) | 2 | VP-001, VP-007 |
+
+---
+
+## Section 1: Critical Risk Assets (2 Assets) - Detailed Analysis
 
 ### VP-001 - Turbomolecular Pump (HiPace 700)
 **Location**: Fab 1, Etch Tool Bay 3, Line 2  
@@ -24,7 +31,7 @@
 **Risk Assessment Summary**: VP-001 exhibits converging failure indicators across multiple systems. Operating 8°C above critical temperature threshold (73°C vs 65°C max) with vibration levels 18% beyond safe limits (2.95 mm/s vs 2.5 mm/s max). Power consumption increased 22% above baseline, indicating severe mechanical stress. At 4.5 years old (90% of expected lifespan), MTBF has dropped to 145 days—60% below the 365-day target. The combination of thermal, mechanical, and electrical deterioration indicates imminent bearing seizure or rotor damage.
 
 #### Technical Performance Metrics
-| Parameter | Current | Threshold | Status | 30-Day Trend |
+| Parameter | Current | Threshold | Status | Last 30-Day Trend |
 |-----------|---------|-----------|--------|--------------|
 | **Operating Temperature** | 73°C | 65°C | ![Critical](https://img.shields.io/badge/+12%25-yellow) | ↗️ +8°C |
 | **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-yellow) | ↗️ +0.45 mm/s |
@@ -33,7 +40,7 @@
 | **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-yellow) | ↘️ -35 L/s |
 | **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/60%25_below-red) | ↘️ -25d |
 
-#### Alarm History (30 Days)
+#### Alarm History (last 30 Days)
 | Date | Time | Alarm Type | Severity | Duration | Parameters Affected |
 |------|------|------------|----------|----------|-------------------|
 | Aug 12 | 14:32 | Critical Temperature | ![Critical](https://img.shields.io/badge/Critical-red) | Active (6.5h) | Temp: 73°C, Vibration: 2.95 mm/s |
