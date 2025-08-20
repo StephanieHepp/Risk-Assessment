@@ -249,7 +249,18 @@ xychart-beta
 ### 30-Day Critical Path
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
+%%{init: {
+  'theme':'base',
+  'themeVariables': {
+    'primaryColor': '#1976d2',        /* Blau für Tasks */
+    'primaryTextColor': '#ffffff',    /* Weiße Schrift */
+    'primaryBorderColor': '#0d47a1',  /* Dunkler Rand */
+    'lineColor': '#000000',           /* Schwarze Zeitachse */
+    'tertiaryColor': '#f5f5f5',       /* Hellgrau für Section-Header */
+    'fontSize': '14px',
+    'fontFamily': 'Arial'
+  }
+}}%%
 timeline
     title Fleet Recovery Action Plan
 
