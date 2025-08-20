@@ -40,17 +40,11 @@ pie title IoT Asset Status (200 Connected Assets)
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph TB
-    subgraph "Fab 1"
+    subgraph "Fab 3"
         direction TB
         spacer["<br/><br/>"]:::invisible
-            subgraph "Bay 1-3: Etch Lines" 
-                F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
-            end
-            subgraph "Bay 4-6: PVD/CVD"
-                F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
-            end
-            subgraph "Bay 7-9: Support" 
-                F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
+            subgraph "Bay 16-18: Development"
+                F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
             end
     end
     
@@ -65,11 +59,17 @@ graph TB
             end
     end
     
-    subgraph "Fab 3"
+    subgraph "Fab 1"
         direction TB
         spacer["<br/><br/>"]:::invisible
-            subgraph "Bay 16-18: Development"
-                F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
+            subgraph "Bay 1-3: Etch Lines" 
+                F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
+            end
+            subgraph "Bay 4-6: PVD/CVD"
+                F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
+            end
+            subgraph "Bay 7-9: Support" 
+                F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
             end
     end
 
