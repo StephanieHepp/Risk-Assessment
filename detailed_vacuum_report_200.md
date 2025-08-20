@@ -38,7 +38,7 @@
 | **Power Consumption** | +22% | Baseline | ![Critical](https://img.shields.io/badge/+22%25-orange) | ↗️ +15% |
 | **Motor Current** | 8.9A | 8.0A | ![Exceeded](https://img.shields.io/badge/+11%25-yellow) | ↗️ +0.8A |
 | **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-yellow) | ↘️ -35 L/s |
-| **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/60%25_below-red) | ↘️ -25d |
+| **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/-60%25_below-red) | ↘️ -25d |
 
 #### Alarm History (last 30 Days)
 | Date | Time | Alarm Type | Severity | Duration | Parameters Affected |
