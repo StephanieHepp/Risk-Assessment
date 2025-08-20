@@ -74,6 +74,7 @@ graph TB
     classDef high fill:#ff9900,stroke:#333,stroke-width:2px,color:#fff
     classDef medium fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
     classDef lowrisk fill:#4CAF50,stroke:#333,stroke-width:1px,color:#fff
+    classDef invisible fill:none,stroke:none
     
     class F1B1,F2B1 critical
     class F1B2,F2B2,F3B1 high
