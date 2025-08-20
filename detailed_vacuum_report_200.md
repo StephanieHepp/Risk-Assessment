@@ -26,7 +26,7 @@
 
 ### VP-001 - Turbomolecular Pump (HiPace 700)
 **Location**: Fab 1, Etch Tool Bay 3, Line 2  
-**Risk Score**: ![Critical](https://img.shields.io/badge/89%25-red) **Status**: CRITICAL FAILURE IMMINENT
+**Risk Score**: ![Critical](https://img.shields.io/badge/89%25-red) **Status**: ![Critical](https://img.shields.io/badge/Critical-red)<br>
 
 **Risk Assessment Summary**: VP-001 exhibits converging failure indicators across multiple systems. Operating 8°C above critical temperature threshold (73°C vs 65°C max) with vibration levels 18% beyond safe limits (2.95 mm/s vs 2.5 mm/s max). Power consumption increased 22% above baseline, indicating severe mechanical stress. At 4.5 years old (90% of expected lifespan), MTBF has dropped to 145 days—60% below the 365-day target. The combination of thermal, mechanical, and electrical deterioration indicates imminent bearing seizure or rotor damage.
 
@@ -59,7 +59,8 @@
 
 ### VP-007 - Dry Scroll Pump (XDS 35i)
 **Location**: Fab 1, Load Lock Chamber, Tool 7  
-**Risk Score**: ![Critical](https://img.shields.io/badge/87%25-red) **Status**: ![Critical](https://img.shields.io/badge/Critical-red)
+**Risk Score**: ![Critical](https://img.shields.io/badge/87%25-red) **Status**: ![Critical](https://img.shields.io/badge/Critical-red)<br>
+
 **Risk Assessment Summary**: VP-007 shows advanced internal scroll element degradation with seal failure. Pumping capacity declined 25% to 26.25 m³/h (below 30 m³/h minimum threshold), while motor current increased 8% above critical limits to compensate. Oil temperature elevated 4°C at 74°C, indicating increased friction from worn scroll elements. MTBF collapsed to 120 days—70% below 400-day target. Internal damage progression cannot be halted through maintenance.
 
 #### Technical Performance Metrics
