@@ -54,7 +54,7 @@ graph TB
     end
     
     subgraph "Fab 2 - Mature Node Production"
-
+        inset[Line breaks <br />work in <br />Insets]
         subgraph "Bay 10-12: Production"
             F2B1["🔴 1 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
         end
@@ -64,7 +64,7 @@ graph TB
     end
     
     subgraph "Fab 3 - R&D/Pilot"
-
+        inset[Line breaks <br />work in <br />Insets]
         subgraph "Bay 16-18: Development"
             F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
         end
