@@ -8,7 +8,7 @@
 
 ## Report Selection Criteria
 **Risk Categories Included**: Critical<br>
-**Asset Types**: Turbomolecular, Dry Scroll
+**Asset Types**: Turbomolecular, Dry Scroll<br>
 **Facilities**: Fab 1, Fab 2, Fab 3  
 **Time Range**: 30-day forward assessment with 90-day historical analysis
 
