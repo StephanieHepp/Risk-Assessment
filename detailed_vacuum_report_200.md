@@ -37,8 +37,8 @@
 | **Vibration Level** | 2.95 mm/s | 2.5 mm/s | ![Critical](https://img.shields.io/badge/+18%25-yellow) | ↗️ +0.45 mm/s |
 | **Power Consumption** | +22% | Baseline | ![Critical](https://img.shields.io/badge/+22%25-orange) | ↗️ +15% |
 | **Motor Current** | 8.9A | 8.0A | ![Exceeded](https://img.shields.io/badge/+11%25-yellow) | ↗️ +0.8A |
-| **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/-7%25-yellow) | ↘️ -35 L/s |
-| **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/-60%25_below-red) | ↘️ -25d |
+| **Pumping Speed** | 650 L/s | 700 L/s | ![Degraded](https://img.shields.io/badge/—7%25-yellow) | ↘️ -35 L/s |
+| **Age/MTBF** | 4.5y / 145d | 5.0y / 365d | ![Critical](https://img.shields.io/badge/—60%25-red) | ↘️ -25d |
 
 #### Alarm History (last 30 Days)
 | Date | Time | Alarm Type | Severity | Duration | Parameters Affected |
@@ -66,7 +66,7 @@
 #### Technical Performance Metrics
 | Parameter | Current | Threshold | Status | 30-Day Trend |
 |-----------|---------|-----------|--------|--------------|
-| **Pumping Speed** | 26.25 m³/h | 30 m³/h | ![Critical](https://img.shields.io/badge/-25%25-orange) | ↘️ -8.75 m³/h |
+| **Pumping Speed** | 26.25 m³/h | 30 m³/h | ![Critical](https://img.shields.io/badge/—25%25-orange) | ↘️ -8.75 m³/h |
 | **Motor Current** | 12.96A | 12.0A | ![Critical](https://img.shields.io/badge/+8%25-yellow) | ↗️ +0.96A |
 | **Oil Temperature** | 74°C | 70°C | ![Exceeded](https://img.shields.io/badge/+6%25-yellow) | ↗️ +4°C |
 | **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40%25-red) | ↗️ +0.8 mbar |
