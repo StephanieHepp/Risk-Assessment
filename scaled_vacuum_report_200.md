@@ -35,16 +35,6 @@ pie title IoT Asset Status (200 Connected Assets)
 
 **IoT Health**: 70% of fleet operating normally, 29% showing warnings, 1% in alarm state. All alarm-status assets correlate with critical risk category, confirming our risk assessment accuracy.
 
-### Business Impact Summary
-| Metric | Value | Status | Trend |
-|--------|-------|--------|-------|
-| **Total Production Value at Risk** | $12.8M (30 days) | ![Critical](https://img.shields.io/badge/Critical-red) | ↗️ +15% |
-| **Critical Process Tools Affected** | 23 tools | ![High](https://img.shields.io/badge/High-orange) | ↗️ +4 tools |
-| **Fleet Availability** | 94.2% | ![Below Target](https://img.shields.io/badge/Below_99%25_Target-orange) | ↘️ -1.8% |
-| **Emergency Maintenance Rate** | 28% | ![Critical](https://img.shields.io/badge/Target_<15%25-red) | ↗️ +8% |
-
----
-
 ## Critical Risk Heat Map - Fab Layout View
 
 ```mermaid
