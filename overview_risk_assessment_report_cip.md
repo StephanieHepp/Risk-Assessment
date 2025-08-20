@@ -148,7 +148,12 @@ pie title "Critical/High Risk by Pump Type"
 ### Monthly Fleet Reliability Trend
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#ffffff"   /* Weißer Hintergrund */
+  }
+}}%%
 xychart-beta
     title "Fleet MTBF and Availability Trends (8-Month View)"
     x-axis ["Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025"]
