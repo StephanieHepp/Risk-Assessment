@@ -331,7 +331,7 @@ timeline
 ## Appendices
 
 ### Quick Reference Links
-- [Detailed Critical Asset Reports (8 assets)](#critical-detailed)
+- [Detailed Critical Asset Reports (2 assets)](#critical-detailed)
 - [Complete High Risk Asset List (15 assets)](#high-risk-detailed) 
 - [Medium Risk Monitoring Protocol (42 assets)](#medium-risk-detailed)
 - [Fleet Performance Database (200 assets)](#fleet-database)
