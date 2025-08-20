@@ -14,14 +14,14 @@
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50', 'tertiaryColor':'#f5f5f5'}}}%%
 pie title Fleet Risk Distribution (200 Assets)
-    "Critical (A) - 8 Assets" : 8
+    "Critical (A) - 2 Assets" : 2
     "High (B) - 15 Assets" : 15
     "Medium (C) - 42 Assets" : 42
     "Low-Medium (D) - 67 Assets" : 67
-    "Low (E) - 68 Assets" : 68
+    "Low (E) - 74 Assets" : 74
 ```
 
-**Fleet Status**: 4% of assets are in critical condition requiring immediate action, while 68% operate in acceptable ranges. The 23 critical/high-risk assets represent our primary focus area, affecting $12.8M in production value over the next 30 days.
+**Fleet Status**: 1% of assets are in critical condition requiring immediate action, while 91.5% operate in acceptable ranges (low-medium). The 17 critical/high-risk assets represent our primary focus area.
 
 ### Real-Time IoT Status Overview
 
@@ -30,7 +30,7 @@ pie title Fleet Risk Distribution (200 Assets)
 pie title IoT Asset Status (200 Connected Assets)
     "Running Normal - 134 Assets" : 134
     "Warning Status - 58 Assets" : 58
-    "Alarm Status - 8 Assets" : 8
+    "Alarm Status - 2 Assets" : 2
 ```
 
 **IoT Health**: 67% of fleet operating normally, 29% showing warnings, 4% in alarm state. All alarm-status assets correlate with critical risk category, confirming our risk assessment accuracy.
