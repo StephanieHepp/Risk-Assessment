@@ -38,7 +38,7 @@ pie title IoT Asset Status (200 Connected Assets)
 ## Critical Risk Heat Map - Fab Layout View
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph TB
     subgraph "Fab 1 - Advanced Node Production"
         subgraph "Bay 1-3: Etch Lines"
