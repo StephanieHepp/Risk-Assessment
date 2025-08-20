@@ -40,7 +40,7 @@ pie title IoT Asset Status (200 Connected Assets)
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
 graph TB
-    subgraph "Fab 1 - Advanced Node Production"
+    subgraph "Fab 1"
         direction TB
         spacer["<br/><br/>"]:::invisible
             subgraph "Bay 1-3: Etch Lines" 
@@ -54,7 +54,7 @@ graph TB
             end
     end
     
-    subgraph "Fab 2 - Mature Node Production"
+    subgraph "Fab 2"
         direction TB
         spacer["<br/><br/>"]:::invisible
             subgraph "Bay 10-12: Production"
@@ -65,7 +65,7 @@ graph TB
             end
     end
     
-    subgraph "Fab 3 - R&D/Pilot"
+    subgraph "Fab 3"
         direction TB
         spacer["<br/><br/>"]:::invisible
             subgraph "Bay 16-18: Development"
