@@ -8,7 +8,7 @@
 ---
 
 ## Report Selection Criteria
-**Risk Categories Included**: Critical, High, Medium, Low-Medium, Low  
+**Risk Categories Included**: Critical
 **Asset Types**: All pump technologies (Turbomolecular, Dry Scroll, Rotary Vane, Roots Blower)  
 **Facilities**: Fab 1, Fab 2, Fab 3  
 **Time Range**: 30-day forward assessment with 90-day historical analysis
@@ -62,4 +62,4 @@
 | **Pumping Speed** | 26.25 m³/h | 30 m³/h | ![Critical](https://img.shields.io/badge/-25%25-red) | ↘️ -8.75 m³/h |
 | **Motor Current** | 12.96A | 12.0A | ![Critical](https://img.shields.io/badge/+8%25-red) | ↗️ +0.96A |
 | **Oil Temperature** | 74°C | 70°C | ![Exceeded](https://img.shields.io/badge/+6%25-red) | ↗️ +4°C |
-| **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40
+| **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40%25-orange) | ↗️ +0.8 mbar |
