@@ -1,4 +1,4 @@
-# Vacuum Pump Risk Assessment Report v2.0
+# Risk Assessment Report with business impact
 **Fab: Phoenix Semiconductor - Fab 12**  
 **Report Date: August 12, 2025**  
 **Assessment Period: Next 30 Days**  
