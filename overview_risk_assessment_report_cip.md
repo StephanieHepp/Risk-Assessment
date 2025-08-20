@@ -120,7 +120,12 @@ graph TB
 ### Risk Distribution by Age Groups
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#ffffff"   /* Weißer Hintergrund */
+  }
+}}%%
 xychart-beta
     title "Fleet Risk Profile by Age Groups"
     x-axis ["0-1 Years (45 assets)", "1-2 Years (52 assets)", "2-3 Years (48 assets)", "3-4 Years (35 assets)", "4-5 Years (20 assets)"]
@@ -235,7 +240,12 @@ pie title "Primary Failure Modes - Critical/High Risk Assets (23 Total)"
 ### Risk Velocity Tracking
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#ffffff"   /* Weißer Hintergrund */
+  }
+}}%%
 xychart-beta
     title "Risk Acceleration Patterns (30-Day Velocity)"
     x-axis ["Week 1", "Week 2", "Week 3", "Week 4"]
