@@ -7,7 +7,7 @@
 ---
 
 ## Report Selection Criteria
-**Risk Categories Included**: Critical
+**Risk Categories Included**: Critical<br>
 **Asset Types**: All pump technologies (Turbomolecular, Dry Scroll, Rotary Vane, Roots Blower)  
 **Facilities**: Fab 1, Fab 2, Fab 3  
 **Time Range**: 30-day forward assessment with 90-day historical analysis
