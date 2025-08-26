@@ -1,4 +1,4 @@
-# Weekly Detailed Risk Assessment Report for CIP Engineers
+# Weekly Detailed Risk Assessment Report
 **Fab: Phoenix Semiconductor - Multi-Fab Enterprise**  
 **Report Date: August 12, 2025**  
 **Assessment Period: Next 30 Days**  
