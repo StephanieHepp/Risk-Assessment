@@ -22,42 +22,11 @@
 
 ---
 
-## Time Series Analysis - Last 30 Days
+## Alert Summary
 
-The following chart shows comprehensive sensor data trends across all critical parameters for the assessment period:
-
-```
-Performance Indicators Trend Analysis (Last 30 Days)
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ 1.0 ┤                                                                                                             │
-│     ┤     ╭─╮                            ╭──╮                                                                   │
-│ 0.8 ┤    ╱   ╲                          ╱    ╲    ╭─╮               ╭─╮                                       │
-│     ┤   ╱     ╲        ╭─╮              ╱      ╲  ╱   ╲             ╱   ╲              ╭─╮                     │
-│ 0.6 ┤  ╱       ╲      ╱   ╲            ╱        ╲╱     ╲           ╱     ╲            ╱   ╲    ╭─╮             │
-│     ┤ ╱         ╲    ╱     ╲          ╱                 ╲         ╱       ╲          ╱     ╲  ╱   ╲           │
-│ 0.4 ┤╱           ╲  ╱       ╲        ╱                   ╲       ╱         ╲        ╱       ╲╱     ╲          │
-│     ┤             ╲╱         ╲      ╱                     ╲     ╱           ╲      ╱                ╲         │
-│ 0.2 ┤                         ╲    ╱                       ╲   ╱             ╲    ╱                  ╲        │
-│     ┼─────────────────────────────╱─────────────────────────╲─╱───────────────╲──╱────────────────────╲───────│
-│ 0.0 ┤                                                         ╲                 ╲╱                      ╲      │
-└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘
-  Jul13  Jul15  Jul17  Jul19  Jul21  Jul23  Jul25  Jul27  Jul29  Jul31   Aug2   Aug4   Aug6   Aug8  Aug10  Aug12
-
-Legend:
-━━━ Process Indicator (VP-001 Temperature Normalized)  
-━━━ Rotor Vibration Indicator (VP-001 Vibration/Max)
-━━━ Adaptive Wear Indicator (VP-007 Pumping Speed Loss)
-━━━ AMP IV Current Ratio (Motor Current/Threshold)
-━━━ Roots1 IV Current Ratio (Secondary Systems)
-━━━ Exhaust Pressure Ratio (VP-007 Ultimate Pressure)
-```
-
-**Key Observations from Time Series Data:**
-- **Temperature trends (Blue)**: VP-001 shows steady temperature rise over the last 15 days, with critical threshold breach on Aug 8th
-- **Vibration patterns (Red)**: Increasing amplitude and frequency, correlating with temperature spikes
-- **Performance degradation (Green)**: VP-007 pumping speed shows continuous decline since July 25th
-- **Power consumption (Orange)**: Both assets showing increased current draw as compensation mechanism
-- **Pressure performance (Cyan)**: Ultimate pressure degradation indicates seal failures in VP-007
+| Priority | Count | Assets |
+|----------|-------|--------|
+| ![Critical](https://img.shields.io/badge/URGENT-red) | 2 | VP-001, VP-007 |
 
 ---
 
@@ -87,6 +56,57 @@ Legend:
 | Aug 10 | 16:45 | Power Anomaly | ![High](https://img.shields.io/badge/High-orange) | 3.1 hrs | Current: 8.7A, Power: +18% |
 | Aug 08 | 11:20 | High Temperature | ![High](https://img.shields.io/badge/High-orange) | 4.5 hrs | Temp: 68°C, decreasing pumping speed |
 | Aug 05 | 07:30 | Vibration Warning | ![Warning](https://img.shields.io/badge/Warning-yellow) | 2.8 hrs | Vibration: 2.6 mm/s |
+
+#### Time Series Analysis - VP-001 (Last 30 Days)
+![VP-001 Time Series](https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=VP-001+Time+Series+Analysis)
+
+```
+VP-001 Sensor Data Trends (July 13 - August 12, 2025)
+Temperature (°C) / Vibration (mm/s) / Power (%) / Current (A) / Speed (L/s)
+
+ 80 ┤                                                              ╭──╮                
+ 75 ┤                                                          ╭──╱    ╲               
+ 70 ┤                                              ╭──╮    ╭──╱         ╲──╮           
+ 65 ┤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   (Temp Threshold)
+ 60 ┤                                          ╭──╱    ╲──╱                  ╲─╮       
+ 55 ┤                                      ╭──╱           ╲                     ╲─╮    
+ 50 ┤                                  ╭──╱                ╲                      ╲──╮ 
+ 45 ┤                              ╭──╱                     ╲                        ╲
+ 40 ┤                          ╭──╱                          ╲                        
+ 35 ┤                      ╭──╱                               ╲                       
+ 30 ┤                  ╭──╱                                    ╲                      
+    └──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴─
+  3.5 ┤                                                                  ╭─╮      ╭─╮
+  3.0 ┤                                                              ╭──╱   ╲────╱   ╲
+  2.5 ┤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   (Vibration Threshold)
+  2.0 ┤                                                          ╭──╱              ╲─╮
+  1.5 ┤                                                      ╭──╱                    ╲
+  1.0 ┤                                                  ╭──╱                        ╲
+  0.5 ┤                                              ╭──╱                             ╲
+  0.0 ┤──────────────────────────────────────────╱                                   
+    └──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴─
+ 130 ┤                                                                          ╭─╮   
+ 125 ┤                                                                      ╭──╱   ╲──
+ 120 ┤                                                                  ╭──╱         
+ 115 ┤                                                              ╭──╱             
+ 110 ┤                                                          ╭──╱                 
+ 105 ┤                                                      ╭──╱                     
+ 100 ┤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   (Power Baseline)
+  95 ┤                                                  ╭──╱                         
+  90 ┤──────────────────────────────────────────────╱                               
+    └──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴─
+   Jul13  Jul15  Jul17  Jul19  Jul21  Jul23  Jul25  Jul27  Jul29  Jul31  Aug2   Aug4   Aug6   Aug8   Aug10  Aug12
+
+Legend:  
+━━━ Temperature (°C) - Blue     ━━━ Vibration (mm/s) - Red     ━━━ Power (%) - Orange
+━━━ Motor Current (A) - Yellow  ━━━ Pumping Speed (L/s) - Green
+```
+
+**Critical Observations:**
+- **Temperature escalation**: Steady rise from 45°C to 73°C over 20 days, breaching 65°C threshold on Aug 8th
+- **Vibration correlation**: Direct correlation with temperature rise, exceeding 2.5 mm/s limit on Aug 11th  
+- **Power compensation**: 22% increase as system compensates for mechanical degradation
+- **Performance decline**: Pumping speed dropped from 700 L/s to 650 L/s indicating bearing wear
 
 #### Immediate Actions Required
 - **URGENT REPLACEMENT**: Must be completed within 12 hours
