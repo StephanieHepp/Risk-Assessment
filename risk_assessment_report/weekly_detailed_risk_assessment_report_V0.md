@@ -98,8 +98,6 @@ xychart-beta
 | **Oil Temperature** | 74°C | 70°C | ![Exceeded](https://img.shields.io/badge/+6%25-yellow) | ↗️ +4°C |
 | **Ultimate Pressure** | 2.8 mbar | 2.0 mbar | ![Degraded](https://img.shields.io/badge/+40%25-red) | ↗️ +0.8 mbar |
 
-#### Time Series Analysis - VP-007 (Last 30 Days)
-![VP-007 Time Series](https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=VP-007+Time+Series+Analysis)
 
 #### Time Series Analysis - VP-007 (Last 30 Days)
 
@@ -136,22 +134,13 @@ xychart-beta
 
 ## Section 2: Lifetime Performance Analysis - Assets Approaching EOL
 
-**Risk Scoring Methodology**: The Risk Score and 30-Day Failure Risk are identical values based on our predictive algorithm analyzing the last 30 days of sensor data, operational patterns, and degradation trends. The Status indicator shows trend direction compared to the previous assessment period (last week):
-
-- **Status Symbols**: ↗️ Risk Increasing | ➡️ Risk Stable | ↘️ Risk Decreasing
-- **Risk Levels**: 0-15% (Low/Green) | 16-35% (Moderate/Yellow) | 36-65% (High/Orange) | 66-100% (Critical/Red)
-
-This section analyzes pumps nearing their expected operational lifetime, assessing their current health status and providing continuation recommendations based on performance indicators rather than age alone.
-
 ### VP-045 - Turbomolecular Pump (HiPace 300)
 **Location**: Fab 2, Sputter Chamber 12  
 **Operational Age**: 4.8 years (96% of 5-year expected lifetime)  
 **Total Runtime**: 41,280 hours  
-**Risk Score**: ![Low](https://img.shields.io/badge/8%25-green) **Status**: ![Stable](https://img.shields.io/badge/Stable-green) ➡️
+**Risk Score**: ![Low](https://img.shields.io/badge/8%25-green) **Status**: ![Stable](https://img.shields.io/badge/Stable-green)
 
 **Lifetime Assessment**: Despite approaching end-of-life timeline, VP-045 demonstrates excellent performance stability. All critical parameters remain within acceptable ranges: temperature at 52°C (20% below threshold), vibration at 1.8 mm/s (28% below limit), and power consumption stable at baseline +3%. MTBF remains strong at 320 days, only 12% below target.
-
-**30-Day Failure Risk**: ![Low](https://img.shields.io/badge/8%25-green)
 
 **Recommendation**: **CONTINUE OPERATION** - Asset shows no signs of imminent failure despite age. Recommend continued monitoring with monthly inspection intervals. Expected remaining operational life: 8-12 months under current conditions.
 
@@ -172,8 +161,6 @@ This section analyzes pumps nearing their expected operational lifetime, assessi
 
 **Lifetime Assessment**: VP-062 has exceeded expected lifetime but maintains satisfactory performance. Pumping speed at 32.1 m³/h (7% above minimum threshold), oil temperature steady at 68°C (3% below limit), and ultimate pressure at 1.9 mbar (5% better than specification). Some degradation evident in motor current (+6% above baseline) but within acceptable operational range.
 
-**30-Day Failure Risk**: ![Low-Moderate](https://img.shields.io/badge/15%25-yellow)
-
 **Recommendation**: **CONTINUE WITH ENHANCED MONITORING** - Asset suitable for continued operation with bi-weekly performance checks. Schedule preventive maintenance within 60 days including oil change and seal inspection. Expected remaining operational life: 4-6 months.
 
 | Parameter | Current | Status | Performance Grade | Trend (vs. Last Period) |
@@ -181,7 +168,7 @@ This section analyzes pumps nearing their expected operational lifetime, assessi
 | Pumping Speed | 32.1 m³/h | ![Good](https://img.shields.io/badge/+7%25-green) | B+ | ↘️ Slight decline |
 | Oil Temperature | 68°C | ![Good](https://img.shields.io/badge/−3%25-green) | A | ↗️ Slight increase |
 | Motor Current | Baseline +6% | ![Acceptable](https://img.shields.io/badge/+6%25-yellow) | B | ↗️ Increasing |
-| Ultimate Pressure | 1.9 mbar | ![Good](https://img.shields.io/badge/−5%25-green) | A | ↔️ Stable |
+| Ultimate Pressure | 1.9 mbar | ![Good](https://img.shields.io/badge/−5%25-green) | A | ➡️ Stable |
 
 ---
 
@@ -192,8 +179,6 @@ This section analyzes pumps nearing their expected operational lifetime, assessi
 **Risk Score**: ![Moderate-High](https://img.shields.io/badge/35%25-orange) **Status**: ![Degrading](https://img.shields.io/badge/Degrading-orange) ↗️
 
 **Lifetime Assessment**: VP-089 shows concerning performance degradation despite similar age to VP-045. Temperature elevated to 61°C (6% below threshold but trending upward), vibration at 2.2 mm/s (12% below limit but increasing), and power consumption +12% above baseline. MTBF dropped to 280 days (23% below target).
-
-**30-Day Failure Risk**: ![Moderate-High](https://img.shields.io/badge/35%25-orange)
 
 **Recommendation**: **PLAN REPLACEMENT WITHIN 90 DAYS** - While not immediately critical, degradation trends suggest replacement should be scheduled proactively. Asset suitable for continued operation under close monitoring (weekly inspections). Procurement of replacement unit recommended.
 
