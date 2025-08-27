@@ -8,41 +8,6 @@
 
 ---
 
-## Fleet Performance Analytics
-
-### Risk Distribution by Age Groups
-
-```mermaid
-%%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "background": "#ffffff"   /* Weißer Hintergrund */
-  }
-}}%%
-xychart-beta
-    title "Fleet Risk Profile by Age Groups"
-    x-axis ["0-1 Years (45 assets)", "1-2 Years (52 assets)", "2-3 Years (48 assets)", "3-4 Years (35 assets)", "4-5 Years (20 assets)"]
-    y-axis "Average Risk Score (%)" 0 --> 70
-    bar "Average Risk" [8, 15, 25, 45, 62]
-    line "Critical Threshold (80%)" [80, 80, 80, 80, 80]
-    line "High Risk Threshold (60%)" [60, 60, 60, 60, 60]
-```
-
-**Age Analysis**: Risk accelerates significantly after 3 years, with 4-5 year assets averaging 62% risk score. This data supports our 4-year replacement strategy for high-utilization pumps.
-
-### Technology Type Risk Distribution
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
-pie title "Critical/High Risk by Pump Type"
-    "Turbomolecular (12 assets)" : 12
-    "Dry Scroll (6 assets)" : 6
-    "Rotary Vane (3 assets)" : 3
-    "Roots Blower (2 assets)" : 2
-```
-
-**Technology Insights**: Turbomolecular pumps represent 52% of high-risk assets despite being 40% of fleet, indicating higher maintenance complexity and failure rates in high-vacuum applications.
-
 ### Monthly Fleet Reliability Trend
 
 ```mermaid
@@ -80,26 +45,6 @@ pie title "Primary Failure Modes - Critical/High Risk Assets (23 Total)"
 ```
 
 **Failure Pattern**: Bearing-related failures dominate (39% of high-risk assets), suggesting opportunity for enhanced lubrication protocols and bearing upgrade programs.
-
-### Risk Velocity Tracking
-
-```mermaid
-%%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "background": "#ffffff"   /* Weißer Hintergrund */
-  }
-}}%%
-xychart-beta
-    title "Risk Acceleration Patterns (30-Day Velocity)"
-    x-axis ["Week 1", "Week 2", "Week 3", "Week 4"]
-    y-axis "Assets Crossing Risk Thresholds" 0 --> 8
-    bar "New Critical Assets" [1, 2, 3, 2]
-    bar "New High Risk Assets" [3, 4, 2, 6]
-    line "Trend (Total New High+Critical)" [4, 6, 5, 8]
-```
-
-**Risk Velocity**: Asset degradation is accelerating, with 8 new high/critical assets in week 4 vs. 4 in week 1. This 100% increase indicates systematic issues requiring fleet-wide intervention.
 
 ---
 
