@@ -11,6 +11,7 @@
 **Asset Types**: Turbomolecular, Dry Scroll 
 **Facilities**: Fab 1, Fab 2, Fab 3  
 **Time Range**: 30-day forward assessment with 90-day historical analysis
+**Process impacted**: CVD-001, ETCH-1202
 
 ---
 
