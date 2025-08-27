@@ -119,24 +119,16 @@ graph TB
 
 ### Executive Summary - Financial Impact
 
-**Total Annual Cost Avoidance Potential: $847,500**
-- **Preventive vs. Emergency Maintenance**: $485,200 saved annually
-- **Production Downtime Reduction**: $285,600 avoided costs
-- **Extended Asset Lifecycle**: $76,700 in depreciation benefits
-
 ### Detailed Cost Analysis by Intervention Category
 
 #### 1. Emergency vs. Preventive Maintenance Cost Comparison
 
 | Maintenance Type | Average Cost | Current Frequency (Annual) | Monitoring-Enabled Frequency | Annual Savings |
 |------------------|--------------|---------------------------|------------------------------|----------------|
-| **Emergency Repair** | $8,500 | 56 incidents | 22 incidents | $289,000 |
+| **Predicted failures** | $8,500 | 56 incidents | 22 incidents | $289,000 |
 | **Unscheduled Maintenance** | $3,200 | 84 incidents | 35 incidents | $156,800 |
-| **Critical Component Replacement** | $12,750 | 18 incidents | 7 incidents | $140,250 |
-| **After-Hours Service Calls** | $5,800 | 32 calls | 8 calls | $139,200 |
-| **Rush Parts Delivery** | $1,850 | 45 shipments | 12 shipments | $61,050 |
-| **Expedited Technician Deployment** | $2,100 | 28 deployments | 8 deployments | $42,000 |
 | **Production Line Shutdown Events** | $25,000 | 8 events | 2 events | $150,000 |
+| **Wafer loss** | $25,000 | 8 events | 2 events | $150,000 |
 
 **Subtotal - Direct Service Cost Reduction: $978,300**
 
@@ -173,9 +165,7 @@ xychart-beta
 | Monitoring Benefit | Financial Impact | Calculation Basis |
 |--------------------|------------------|-------------------|
 | **Extended Mean Time Between Failures** | +18 months average | $2,850 per asset annually |
-| **Reduced Catastrophic Failures** | 78% reduction | $15,400 per incident avoided |
-| **Optimized Replacement Timing** | 15% cost reduction | $225 per asset annually |
-| **Improved Spare Parts Management** | 22% inventory reduction | $1,280 per asset annually |
+
 
 **Annual Fleet Lifecycle Savings**: $180,000
 
@@ -196,43 +186,7 @@ xychart-beta
 - **ROI**: 537%
 - **Payback Period**: 1.9 months
 
-### Cost Savings Breakdown by Asset Risk Category
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50', 'tertiaryColor':'#2196F3', 'quaternaryColor':'#9C27B0'}}}%%
-pie title Annual Cost Savings by Risk Category ($847.5K Total)
-    "Critical Assets Prevention - $289K" : 289
-    "High Risk Optimization - $285K" : 285
-    "Medium Risk Management - $156K" : 156
-    "Fleet-wide Efficiency - $117K" : 117
-```
-
-### Monthly Cost Tracking Dashboard
-
-| Month | Emergency Costs Avoided | Preventive Savings | Production Impact | Total Monthly Savings |
-|-------|-------------------------|--------------------|--------------------|----------------------|
-| **Aug 2025** | $42,500 | $18,200 | $45,000 | $105,700 |
-| **Jul 2025** | $38,900 | $22,100 | $41,000 | $102,000 |
-| **Jun 2025** | $35,200 | $19,800 | $38,000 | $93,000 |
-| **Q2 2025 Average** | $37,800 | $21,200 | $38,500 | $97,500 |
-
-### Recommended Cost Optimization Actions
-
-#### Immediate (0-30 Days)
-1. **Accelerate Critical Asset Interventions**: Target $34,000 immediate cost avoidance
-2. **Optimize High-Risk Maintenance Scheduling**: Reduce emergency service calls by 60%
-3. **Implement Enhanced Monitoring Protocols**: Deploy to 42 medium-risk assets
-
-#### Short-Term (30-90 Days)
-1. **Expand Predictive Analytics**: Cover additional failure modes for $125K annual savings
-2. **Vendor Cost Negotiations**: Leverage monitoring data for 15% service cost reduction
-3. **Spare Parts Optimization**: Reduce inventory costs by $45K annually
-
-#### Strategic (90+ Days)
-1. **Fleet Modernization Planning**: Use monitoring data to optimize replacement cycles
-2. **Advanced Analytics Implementation**: Deploy ML models for $200K additional annual savings
-3. **Cross-Site Monitoring Integration**: Scale cost benefits across all facilities
-
+  
 ---
 
 ## Recommendations Summary
@@ -254,18 +208,6 @@ pie title Annual Cost Savings by Risk Category ($847.5K Total)
 2. **Fleet Optimization**: Develop age-based replacement strategy
 3. **Vendor Partnerships**: Negotiate service-level agreements for critical assets
 4. **Inventory Strategy**: Optimize spare parts based on failure mode analysis
-
----
-
-### Key Performance Indicators
-| KPI | Current | Target | Next Review |
-|-----|---------|--------|-------------|
-| Fleet Availability | 94.2% | 99.0% | Daily |
-| Emergency Maintenance Rate | 28% | <15% | Weekly |
-| Mean Time to Repair | 8.2 hours | 4.5 hours | Weekly |
-| Cost per Asset (Monthly) | $3,650 | $2,200 | Monthly |
-| **Cost Savings Rate** | **$70.6K/month** | **$85K/month** | **Monthly** |
-| **ROI on Monitoring** | **537%** | **400%** | **Quarterly** |
 
 ---
 
