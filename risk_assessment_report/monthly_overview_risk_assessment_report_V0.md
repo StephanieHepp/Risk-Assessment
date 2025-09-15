@@ -94,8 +94,8 @@ graph TB
 
 ### Immediate Action Required (2 Critical Assets)
 
-| Asset ID | Location | Risk Score | Failure Mode | Associated Report | Status |
-|----------|----------|------------|--------------|-----------------|-----------------|
+| Asset ID | Location | Risk Score | Associated Report | Status |
+|----------|----------|------------|-----------------|-----------------|
 | **P-107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | AR-P-107-001 | Waiting for customer validation | 
 | **P-009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | AR-P-009-004 | Service action scheduled on 01/11/2025 |
 
