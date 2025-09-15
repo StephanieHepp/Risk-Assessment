@@ -125,7 +125,8 @@ graph TB
 | **P-0009** | ETC204 | ![Low](https://img.shields.io/badge/07%25-green) | 12.012 h | 15.000 h | Keep Pump Running | Waiting for customer validation |
 | **P-0908** | CVD234 | ![Low](https://img.shields.io/badge/18%25-green) | 34.000 h | 30.000 h | Keep Pump Running | Waiting for customer validation |
 
-**High Runners Summary**: 3 assets reaching their replacement window but in perfect condition. 
+**High Runners Summary**: 3 assets reaching their replacement window but in perfect condition.
+
 ---
 
 ## Recommendations Summary
