@@ -103,8 +103,8 @@ graph TB
 
 ### High Risk Trending (15 Assets - Selected Top 5)
 
-| Asset ID | Location | Risk Score | Primary Concern | Associated Report | Status |
-|----------|----------|------------|-----------------|-------------------|-------------------|
+| Asset ID | Location | Risk Score | Associated Report | Status |
+|----------|----------|------------|-------------------|--------|
 | **P-012** | FUR290 | ![High](https://img.shields.io/badge/78%25-orange) | AR-P-012-001 | Waiting for customer validation |
 | **P-056** | CVD200 | ![High](https://img.shields.io/badge/75%25-orange) | AR-P-056-002 | Service action scheduled on 21/10/2025 |
 | **P-091** | CVD201 | ![High](https://img.shields.io/badge/72%25-orange) | AR-P-091-013 | Service action scheduled on 01/11/2025 |
