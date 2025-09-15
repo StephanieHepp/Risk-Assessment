@@ -90,29 +90,42 @@ graph TB
 
 ---
 
-## Exception-Based Critical Asset Reporting
+## Riskiest Assets Overview
 
 ### Immediate Action Required (2 Critical Assets)
 
-| Asset ID | Location | Risk Score | Associated Report | Status |
-|----------|----------|------------|-------------------|--------|
-| **P-107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | AR-P-107-001 | Waiting for customer validation | 
-| **P-009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | AR-P-009-004 | Service action scheduled on 01/11/2025 |
+| Asset ID | Location | Risk Score | Recommendation | Associated Report | Status |
+|----------|----------|------------|----------------|-------------------|--------|
+| **P-0107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | Pump Removal | AR-P-107-001 | Waiting for customer validation | 
+| **P-1009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | Increase Cylinder Temperature | AR-P-009-004 | Service action scheduled on 01/11/2025 |
 
 **Critical Summary**: 2 assets require emergency action. 
 
 ### High Risk Trending (15 Assets - Selected Top 5)
 
-| Asset ID | Location | Risk Score | Associated Report | Status |
-|----------|----------|------------|-------------------|--------|
-| **P-012** | FUR290 | ![High](https://img.shields.io/badge/78%25-orange) | AR-P-012-001 | Waiting for customer validation |
-| **P-056** | CVD200 | ![High](https://img.shields.io/badge/75%25-orange) | AR-P-056-002 | Service action scheduled on 21/10/2025 |
-| **P-091** | CVD201 | ![High](https://img.shields.io/badge/72%25-orange) | AR-P-091-013 | Service action scheduled on 01/11/2025 |
-| **P-145** | SPU691 | ![High](https://img.shields.io/badge/69%25-orange) | AR-P-145-001 | Waiting for customer validation |
-| **P-178** | ETC089 | ![High](https://img.shields.io/badge/67%25-orange) | AR-P-178-007 | Service action scheduled on 31/10/2025 |
+| Asset ID | Location | Risk Score | Recommendation | Associated Report | Status |
+|----------|----------|------------|----------------|-------------------|--------|
+| **P-0012** | FUR290 | ![High](https://img.shields.io/badge/78%25-orange) | Pump Removal | AR-P-012-001 | Waiting for customer validation |
+| **P-1056** | CVD200 | ![High](https://img.shields.io/badge/75%25-orange) | Increase Dilution | AR-P-056-002 | Service action scheduled on 21/10/2025 |
+| **P-1091** | CVD201 | ![High](https://img.shields.io/badge/72%25-orange) | Check Foreline and Exhaust | AR-P-091-013 | Service action scheduled on 01/11/2025 |
+| **P-1145** | SPU691 | ![High](https://img.shields.io/badge/69%25-orange) | Install a Heating Jacket | AR-P-145-001 | Waiting for customer validation |
+| **P-0178** | ETC089 | ![High](https://img.shields.io/badge/67%25-orange) | Install a Cold Trap | AR-P-178-007 | Service action scheduled on 31/10/2025 |
 
 **High Risk Summary**: 15 assets in deteriorating condition. [View All 15 Assets →](#detailed-high-risk)
 
+---
+
+## High Runners Overview
+
+### Assets Close Target Lifetime (3 Assets Reaching > 90 % Target Lifetime)
+
+| Asset ID | Location | Risk Score | Runtime | Target Lifetime | Recommendation | Status |
+|----------|----------|------------|---------|-----------------|----------------|--------|
+| **P-1007** | SPU023 | ![Low](https://img.shields.io/badge/12%25-green) | 45.237 h | 50.000 h | Keep Pump Running | Waiting for customer validation | 
+| **P-0009** | ETC204 | ![Low](https://img.shields.io/badge/07%25-green) | 12.012 h | 15.000 h | Keep Pump Running | Waiting for customer validation |
+| **P-0908** | CVD234 | ![Low](https://img.shields.io/badge/18%25-green) | 34.000 h | 30.000 h | Keep Pump Running | Waiting for customer validation |
+
+**High Runners Summary**: 3 assets reaching their replacement window but in perfect condition. 
 ---
 
 ## Recommendations Summary
