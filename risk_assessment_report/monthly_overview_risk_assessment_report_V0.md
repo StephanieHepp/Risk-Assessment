@@ -155,11 +155,9 @@ graph TB
 | KPI | Current | Target | Next Review |
 |-----|---------|--------|-------------|
 | Fleet Availability | 94.2% | 99.0% | Daily |
-| Emergency Maintenance Rate | 28% | <15% | Weekly |
+| Failure Rate | 28% | <15% | Weekly |
 | Mean Time to Repair | 8.2 hours | 4.5 hours | Weekly |
-| Cost per Asset (Monthly) | $3,650 | $2,200 | Monthly |
-| **Cost Savings Rate** | **$70.6K/month** | **$85K/month** | **Monthly** |
-| **ROI on Monitoring** | **537%** | **400%** | **Quarterly** |
+| Global Risk Score | 54% | 35% | Monthly |
 
 ---
 
