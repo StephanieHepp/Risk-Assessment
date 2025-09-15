@@ -94,12 +94,12 @@ graph TB
 
 ### Immediate Action Required (2 Critical Assets)
 
-| Asset ID | Location | Risk Score | Failure Mode | Action Timeline |
-|----------|----------|------------|--------------|-----------------|
-| **VP-001** | F1-Etch-Bay3 | ![Critical](https://img.shields.io/badge/89%25-red) | Bearing failure + overheating | 24 hours |
-| **VP-007** | F1-LoadLock-T7 | ![Critical](https://img.shields.io/badge/87%25-red) | Scroll degradation | 48 hours |
+| Asset ID | Location | Risk Score | Failure Mode | Associated Report | Status |
+|----------|----------|------------|--------------|-----------------|-----------------|
+| **P-107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | AR-P-107-001 | Waiting for customer validation | 
+| **P-009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | AR-P-009-004 | Service action scheduled on 01/11/2025 |
 
-**Critical Summary**: 2 assets require emergency replacement within 5 days. Spare inventory status: 6 available, 2 on emergency order (24-48hr delivery).
+**Critical Summary**: 2 assets require emergency action. 
 
 ### High Risk Trending (15 Assets - Selected Top 5)
 
