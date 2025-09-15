@@ -95,7 +95,7 @@ graph TB
 ### Immediate Action Required (2 Critical Assets)
 
 | Asset ID | Location | Risk Score | Associated Report | Status |
-|----------|----------|------------|-----------------|-----------------|
+|----------|----------|------------|-------------------|--------|
 | **P-107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | AR-P-107-001 | Waiting for customer validation | 
 | **P-009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | AR-P-009-004 | Service action scheduled on 01/11/2025 |
 
@@ -103,15 +103,15 @@ graph TB
 
 ### High Risk Trending (15 Assets - Selected Top 5)
 
-| Asset ID | Location | Risk Score | Primary Concern | Trend | Preventive Window |
-|----------|----------|------------|-----------------|-------|-------------------|
-| **VP-012** | F1-Etch-Bay2 | ![High](https://img.shields.io/badge/78%25-orange) | Temperature rising | ↗️ +12% (7d) | 10-14 days |
-| **VP-056** | F1-PVD-Chamber4 | ![High](https://img.shields.io/badge/75%25-orange) | Vibration trend | ↗️ +8% (14d) | 14-21 days |
-| **VP-091** | F2-Etch-Bay12 | ![High](https://img.shields.io/badge/72%25-orange) | Power consumption | ↗️ +15% (21d) | 21-28 days |
-| **VP-145** | F2-LoadLock-T15 | ![High](https://img.shields.io/badge/69%25-orange) | MTBF declining | ↗️ +6% (30d) | 28-35 days |
-| **VP-178** | F3-Support-Rough2 | ![High](https://img.shields.io/badge/67%25-orange) | Oil temperature | ↗️ +5% (14d) | 35-42 days |
+| Asset ID | Location | Risk Score | Primary Concern | Associated Report | Status |
+|----------|----------|------------|-----------------|-------------------|-------------------|
+| **P-012** | FUR290 | ![High](https://img.shields.io/badge/78%25-orange) | AR-P-012-001 | Waiting for customer validation |
+| **P-056** | CVD200 | ![High](https://img.shields.io/badge/75%25-orange) | AR-P-056-002 | Service action scheduled on 21/10/2025 |
+| **P-091** | CVD201 | ![High](https://img.shields.io/badge/72%25-orange) | AR-P-091-013 | Service action scheduled on 01/11/2025 |
+| **P-145** | SPU691 | ![High](https://img.shields.io/badge/69%25-orange) | AR-P-145-001 | Waiting for customer validation |
+| **P-178** | ETC089 | ![High](https://img.shields.io/badge/67%25-orange) | AR-P-178-007 | Service action scheduled on 31/10/2025 |
 
-**High Risk Summary**: 15 assets in deteriorating condition. Proactive maintenance window: 10-42 days before critical status. [View All 15 Assets →](#detailed-high-risk)
+**High Risk Summary**: 15 assets in deteriorating condition. [View All 15 Assets →](#detailed-high-risk)
 
 ---
 
