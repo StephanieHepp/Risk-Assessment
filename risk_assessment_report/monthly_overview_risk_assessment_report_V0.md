@@ -132,12 +132,12 @@ graph TB
 ## Recommendations Summary
 
 ### Immediate Actions (0-7 Days)
-1. **Validate Recommendations For Riskiest Pumps**: Check and sign reports AR-P-0107-001, AR-P-0012-001, AR-P-1145-001
-2. **Spare Inventory**: Secure emergency parts delivery for 2 pending critical assets
+1. **Validate Recommendations For Riskiest Pumps**: Get reports AR-P-0107-001, AR-P-0012-001 and AR-P-1145-001 signed
+2. **Spare Inventory**: Secure emergency parts delivery for 2 pending critical assets 
 
 ### Short-Term Actions (7-30 Days)
 1. **Preventive Maintenance Blitz**: Address 15 high-risk assets before critical transition
-2. **Validate Recommendations For High Runners**: Check and sign reports LR-P-1007-001
+2. **Validate Recommendations For High Runners**: Get report LR-P-1007-001 signed
 
 ### Strategic Actions (30-90 Days)
 1. **Predictive Analytics**: Expand ML-based failure prediction to full fleet
