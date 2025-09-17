@@ -90,7 +90,23 @@ graph TB
 
 ---
 
-## Riskiest Assets Overview
+## Failure Mode Analysis 
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
+pie title "Primary Failure Modes - Critical/High Risk Assets (23 Total)"
+    "Bearing Wear/Failure - 9 Assets" : 9
+    "Seal Degradation - 5 Assets" : 5
+    "Motor/Electrical Issues - 4 Assets" : 4
+    "Contamination/Oil Issues - 3 Assets" : 3
+    "Thermal Problems - 2 Assets" : 2
+```
+
+**Failure Pattern**: Bearing-related failures dominate (39% of high-risk assets), suggesting opportunity for enhanced lubrication protocols and bearing upgrade programs.
+
+---
+
+## Riskiest Assets Summary
 
 ### Immediate Action Required (2 Critical Assets)
 
@@ -115,7 +131,7 @@ graph TB
 
 ---
 
-## High Runners Overview
+## High Runners Summary
 
 ### Assets Close Target Lifetime (3 Assets Reaching > 90 % Target Lifetime)
 
