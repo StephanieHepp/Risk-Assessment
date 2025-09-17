@@ -92,14 +92,14 @@ graph TB
 
 ## Failure Mode Analysis 
 
-###Last Failures
+### Last Failures
 
-| Asset ID | Location | Risk Score | Recommendation | Associated Report | Status |
-|----------|----------|------------|----------------|-------------------|--------|
-| **P-0107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | Pump Removal | AR-P-0107-001 | Waiting for customer validation | 
-| **P-1009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | Increase Cylinder Temperature | AR-P-1009-004 | Service action scheduled on 01/11/2025 |
+| Asset ID | Location | Failure Mode | Root Cause | Recommended Measures | Associated Report | Status |
+|----------|----------|--------------|------------|----------------------|-------------------|--------|
+| **P-0177** | CVD115 | Shaft broken | Load on MB too high | - | FAR-P-0177-001 | Root cause investigation | 
+| **P-1099** | ETC214 | Faulty contact | Cable too old | Change cable and checks wires at every overhaul | FAR-P-1099-001 | Implementation of corrective mesures |
 
-###Deep Failure Analysis
+### Failure Trend Analysis
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
