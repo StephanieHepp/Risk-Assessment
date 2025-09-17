@@ -92,9 +92,18 @@ graph TB
 
 ## Failure Mode Analysis 
 
+###Last Failures
+
+| Asset ID | Location | Risk Score | Recommendation | Associated Report | Status |
+|----------|----------|------------|----------------|-------------------|--------|
+| **P-0107** | CVD105 | ![Critical](https://img.shields.io/badge/89%25-red) | Pump Removal | AR-P-0107-001 | Waiting for customer validation | 
+| **P-1009** | ETC234 | ![Critical](https://img.shields.io/badge/87%25-red) | Increase Cylinder Temperature | AR-P-1009-004 | Service action scheduled on 01/11/2025 |
+
+###Deep Failure Analysis
+
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
-pie title "Primary Failure Modes"
+pie title Primary Failure Modes
     "Bearing Wear/Failure - 9 Assets" : 9
     "Seal Degradation - 5 Assets" : 5
     "Motor/Electrical Issues - 4 Assets" : 4
