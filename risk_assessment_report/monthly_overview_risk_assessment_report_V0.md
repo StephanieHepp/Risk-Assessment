@@ -94,7 +94,7 @@ graph TB
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
-pie title "Primary Failure Modes - Critical/High Risk Assets (23 Total)"
+pie title "Primary Failure Modes"
     "Bearing Wear/Failure - 9 Assets" : 9
     "Seal Degradation - 5 Assets" : 5
     "Motor/Electrical Issues - 4 Assets" : 4
