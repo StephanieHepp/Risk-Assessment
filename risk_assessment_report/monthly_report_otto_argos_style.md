@@ -145,7 +145,7 @@ pie title Primary Failure Modes
 | Asset ID | Location | Risk Score | Runtime | Target Lifetime | Recommendation | Associated Report | Status |
 |----------|----------|------------|---------|-----------------|----------------|-------------------|--------|
 | **P-1007** | SPU023 | ![Low](https://img.shields.io/badge/12%25-7CB342?style=flat-square) | 45.237 h | 50.000 h | Keep Pump Running | LR-P-1007-001 | Waiting for customer validation | 
-| **P-0009** | ETC204 | ![Low](https://img.shields.io/badge/07%25-7CB342?style=flat-square) | 12.012 h | 15.000 h | Keep Pump Running | LR-P-0009-001 | Telemetries to be analysed in 3 months |
+| **P-0009** | ETC204 | ![Low](https://img.shields.io/badge/7%25-7CB342?style=flat-square) | 12.012 h | 15.000 h | Keep Pump Running | LR-P-0009-001 | Telemetries to be analysed in 3 months |
 | **P-0908** | CVD234 | ![Low](https://img.shields.io/badge/18%25-7CB342?style=flat-square) | 34.000 h | 30.000 h | Keep Pump Running | LR-P-0908-004 | Pump Removal Planned |
 
 **High Runners Summary**: 3 assets reaching their replacement window but in perfect condition.
