@@ -1,12 +1,3 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-</style>
-
-
 # Monthly Risk Assessment Report
 **Fab: Phoenix Semiconductor - Multi-Fab Enterprise**  
 **Report Date: October 12, 2025**  
