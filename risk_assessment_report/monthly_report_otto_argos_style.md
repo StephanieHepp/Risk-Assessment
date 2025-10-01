@@ -12,7 +12,7 @@
 ### Fleet Risk Distribution
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'pie5':'#CB3839', 'pie4':'#F5621E', 'pie3':'#F9CA67', 'pie2':'#F9CA67','pie1':'#68C441','primaryTextColor':'#333', 'primaryBorderColor':'#ddd'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'pie5':'#CB3839', 'pie4':'#F5621E', 'pie3':'#EB645F', 'pie2':'#F9CA67','pie1':'#68C441','primaryTextColor':'#333', 'primaryBorderColor':'#ddd'}}}%%
 pie title Fleet Risk Distribution (200 Assets)
     "Critical (A) - 2 Assets" : 2
     "High (B) - 15 Assets" : 15
