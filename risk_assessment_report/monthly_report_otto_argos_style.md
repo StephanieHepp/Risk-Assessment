@@ -1,3 +1,11 @@
+<style>
+body {
+  font-family: 'Noto Sans', serif;
+}
+</style>
+
+
+
 # Monthly Risk Assessment Report
 **Fab: Phoenix Semiconductor - Multi-Fab Enterprise**  
 **Report Date: October 12, 2025**  
