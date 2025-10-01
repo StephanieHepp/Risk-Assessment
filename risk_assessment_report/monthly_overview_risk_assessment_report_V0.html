@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>monthly_overview_risk_assessment_report_V0.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="monthly-risk-assessment-report">Monthly Risk Assessment Report</h1>
+<p><strong>Fab: Phoenix Semiconductor - Multi-Fab Enterprise</strong><br>
+<strong>Report Date: October 12, 2025</strong><br>
+<strong>Assessment Period: Next 30 Days</strong><br>
+<strong>Fleet Size: 200 Active Assets</strong><br>
+<strong>CIP Engineer: Marcus Chen</strong></p>
+<hr>
+<h2 id="executive-dashboard---fleet-overview">Executive Dashboard - Fleet Overview</h2>
+<h3 id="fleet-risk-distribution">Fleet Risk Distribution</h3>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50', 'tertiaryColor':'#f5f5f5'}}}%%
+pie title Fleet Risk Distribution (200 Assets)
+    "Critical (A) - 2 Assets" : 2
+    "High (B) - 15 Assets" : 15
+    "Medium (C) - 42 Assets" : 42
+    "Low-Medium (D) - 67 Assets" : 67
+    "Low (E) - 74 Assets" : 74
+</div></code></pre>
+<p><strong>Fleet Status</strong>: 2 assets (1%) are in critical condition requiring immediate action, while 183 assets (91.5%) operate in acceptable ranges (low-medium). The 17 critical/high-risk assets represent our primary focus area.</p>
+<h3 id="real-time-iot-status-overview">Real-Time IoT Status Overview</h3>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
+pie title IoT Asset Status (200 Connected Assets)
+    "Running Normal - 134 Assets" : 140
+    "Warning Status - 58 Assets" : 58
+    "Alarm Status - 2 Assets" : 2
+</div></code></pre>
+<p><strong>IoT Health</strong>: 140 assets (70%) of fleet operating normally, 85 assets (29%) showing warnings, 2 assets (1%) in alarm state. All alarm-status assets correlate with critical risk category, confirming our risk assessment accuracy.</p>
+<h2 id="critical-risk-heat-map---fab-layout-view">Critical Risk Heat Map - Fab Layout View</h2>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#fff', 'secondaryColor':'#000'}}}%%
+graph TB
+    subgraph "Fab 3"
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 16-18: Development"
+                F3B1["🔴 1 Critical<br/>🟠 1 High<br/>🟡 5 Medium"]
+            end
+    end
+    
+    subgraph "Fab 2"
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 13-15: Support"
+                F2B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 8 Medium"]
+            end
+            subgraph "Bay 10-12: Production"
+                F2B1["🔴 1 Critical<br/>🟠 4 High<br/>🟡 10 Medium"]
+            end
+    end
+    
+    subgraph "Fab 1"
+        direction TB
+        spacer["<br/><br/>"]:::invisible
+            subgraph "Bay 7-9: Support" 
+                F1B3["🟠 2 High<br/>🟡 6 Medium<br/>🟢 17 Low"]
+            end
+            subgraph "Bay 4-6: PVD/CVD"
+                F1B2["🔴 1 Critical<br/>🟠 3 High<br/>🟡 12 Medium"]
+            end
+            subgraph "Bay 1-3: Etch Lines" 
+                F1B1["🔴 2 Critical<br/>🟠 2 High<br/>🟡 8 Medium"]
+            end
+    end
+
+    classDef invisible fill:none,stroke:none,stroke-width:0px
+    classDef critical fill:#ff6600,stroke:#333,stroke-width:3px,color:#fff
+    classDef high fill:#ff9900,stroke:#333,stroke-width:2px,color:#fff
+    classDef medium fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
+    classDef lowrisk fill:#4CAF50,stroke:#333,stroke-width:1px,color:#fff
+    
+
+    
+    class F1B1,F2B1 critical
+    class F1B2,F2B2,F3B1 high
+    class F1B3 lowrisk
+</div></code></pre>
+<p><strong>Heat Map Analysis</strong>: Fab 1 Etch Lines show highest risk concentration with 3 critical assets. Advanced node production areas demonstrate higher failure rates due to process intensity and older equipment in high-utilization zones.</p>
+<hr>
+<h2 id="failure-mode-analysis">Failure Mode Analysis</h2>
+<h3 id="last-failures">Last Failures</h3>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Location</th>
+<th>Failure Mode</th>
+<th>Root Cause</th>
+<th>Recommended Measures</th>
+<th>Associated Report</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-0177</strong></td>
+<td>CVD115</td>
+<td>Shaft broken</td>
+<td>Load on MB too high</td>
+<td>-</td>
+<td>FAR-P-0177-001</td>
+<td>Root cause investigation</td>
+</tr>
+<tr>
+<td><strong>P-1099</strong></td>
+<td>ETC214</td>
+<td>Faulty contact</td>
+<td>Cable too old</td>
+<td>Change cable and checks wires at every overhaul</td>
+<td>FAR-P-1099-001</td>
+<td>Implementation of corrective mesures</td>
+</tr>
+</tbody>
+</table>
+<h3 id="failure-trend-analysis">Failure Trend Analysis</h3>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ff6600', 'secondaryColor':'#4CAF50'}}}%%
+pie title Primary Failure Modes
+    "Bearing Wear/Failure - 9 Assets" : 9
+    "Seal Degradation - 5 Assets" : 5
+    "Motor/Electrical Issues - 4 Assets" : 4
+    "Contamination/Oil Issues - 3 Assets" : 3
+    "Thermal Problems - 2 Assets" : 2
+</div></code></pre>
+<p><strong>Failure Pattern</strong>: Bearing-related failures dominate (39% of high-risk assets), suggesting opportunity for enhanced lubrication protocols and bearing upgrade programs.</p>
+<hr>
+<h2 id="riskiest-assets-summary">Riskiest Assets Summary</h2>
+<h3 id="immediate-action-required-2-critical-assets">Immediate Action Required (2 Critical Assets)</h3>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Location</th>
+<th>Risk Score</th>
+<th>Recommendation</th>
+<th>Associated Report</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-0107</strong></td>
+<td>CVD105</td>
+<td><img src="https://img.shields.io/badge/89%-red" alt="Critical"></td>
+<td>Pump Removal</td>
+<td>AR-P-0107-001</td>
+<td>Waiting for customer validation</td>
+</tr>
+<tr>
+<td><strong>P-1009</strong></td>
+<td>ETC234</td>
+<td><img src="https://img.shields.io/badge/87%-red" alt="Critical"></td>
+<td>Increase Cylinder Temperature</td>
+<td>AR-P-1009-004</td>
+<td>Service action scheduled on 01/11/2025</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Summary</strong>: 2 assets require emergency action.</p>
+<h3 id="high-risk-trending-15-assets---selected-top-5">High Risk Trending (15 Assets - Selected Top 5)</h3>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Location</th>
+<th>Risk Score</th>
+<th>Recommendation</th>
+<th>Associated Report</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-0012</strong></td>
+<td>FUR290</td>
+<td><img src="https://img.shields.io/badge/78%-orange" alt="High"></td>
+<td>Pump Removal</td>
+<td>AR-P-0012-001</td>
+<td>Waiting for customer validation</td>
+</tr>
+<tr>
+<td><strong>P-1056</strong></td>
+<td>CVD200</td>
+<td><img src="https://img.shields.io/badge/75%-orange" alt="High"></td>
+<td>Increase Dilution</td>
+<td>AR-P-1056-002</td>
+<td>Service action scheduled on 21/10/2025</td>
+</tr>
+<tr>
+<td><strong>P-1091</strong></td>
+<td>CVD201</td>
+<td><img src="https://img.shields.io/badge/72%-orange" alt="High"></td>
+<td>Check Foreline and Exhaust</td>
+<td>AR-P-1091-013</td>
+<td>Service action scheduled on 01/11/2025</td>
+</tr>
+<tr>
+<td><strong>P-1145</strong></td>
+<td>SPU691</td>
+<td><img src="https://img.shields.io/badge/69%-orange" alt="High"></td>
+<td>Install a Heating Jacket</td>
+<td>AR-P-1145-001</td>
+<td>Waiting for customer validation</td>
+</tr>
+<tr>
+<td><strong>P-0178</strong></td>
+<td>ETC089</td>
+<td><img src="https://img.shields.io/badge/67%-orange" alt="High"></td>
+<td>Install a Cold Trap</td>
+<td>AR-P-0178-007</td>
+<td>Service action scheduled on 31/10/2025</td>
+</tr>
+</tbody>
+</table>
+<p><strong>High Risk Summary</strong>: 15 assets in deteriorating condition. <a href="#detailed-high-risk">View All 15 Assets →</a></p>
+<hr>
+<h2 id="high-runners-summary">High Runners Summary</h2>
+<h3 id="assets-close-target-lifetime-3-assets-reaching--90--target-lifetime">Assets Close Target Lifetime (3 Assets Reaching &gt; 90 % Target Lifetime)</h3>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Location</th>
+<th>Risk Score</th>
+<th>Runtime</th>
+<th>Target Lifetime</th>
+<th>Recommendation</th>
+<th>Associated Report</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-1007</strong></td>
+<td>SPU023</td>
+<td><img src="https://img.shields.io/badge/12%-green" alt="Low"></td>
+<td>45.237 h</td>
+<td>50.000 h</td>
+<td>LR-P-1007-001</td>
+<td>Keep Pump Running</td>
+<td>Waiting for customer validation</td>
+</tr>
+<tr>
+<td><strong>P-0009</strong></td>
+<td>ETC204</td>
+<td><img src="https://img.shields.io/badge/07%-green" alt="Low"></td>
+<td>12.012 h</td>
+<td>15.000 h</td>
+<td>LR-P-0009-001</td>
+<td>Keep Pump Running</td>
+<td>Telemetries to be analysed in 3 months</td>
+</tr>
+<tr>
+<td><strong>P-0908</strong></td>
+<td>CVD234</td>
+<td><img src="https://img.shields.io/badge/18%-green" alt="Low"></td>
+<td>34.000 h</td>
+<td>30.000 h</td>
+<td>LR-P-0908-004</td>
+<td>Keep Pump Running</td>
+<td>Pump Removal Planned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>High Runners Summary</strong>: 3 assets reaching their replacement window but in perfect condition.</p>
+<hr>
+<h2 id="recommendations-summary">Recommendations Summary</h2>
+<h3 id="immediate-actions-0-7-days">Immediate Actions (0-7 Days)</h3>
+<ol>
+<li><strong>Validate Recommendations For Riskiest Pumps</strong>: Get reports AR-P-0107-001, AR-P-0012-001 and AR-P-1145-001 signed</li>
+<li><strong>Spare Inventory</strong>: Secure emergency parts delivery for 2 pending critical assets</li>
+</ol>
+<h3 id="short-term-actions-7-30-days">Short-Term Actions (7-30 Days)</h3>
+<ol>
+<li><strong>Preventive Maintenance Blitz</strong>: Address 15 high-risk assets before critical transition</li>
+<li><strong>Validate Recommendations For High Runners</strong>: Get report LR-P-1007-001 signed</li>
+</ol>
+<h3 id="strategic-actions-30-90-days">Strategic Actions (30-90 Days)</h3>
+<ol>
+<li><strong>Predictive Analytics</strong>: Expand ML-based failure prediction to full fleet</li>
+<li><strong>Fleet Optimization</strong>: Reduce global risk score</li>
+<li><strong>Inventory Strategy</strong>: Optimize spare parts based on failure mode analysis</li>
+</ol>
+<hr>
+<h3 id="key-performance-indicators">Key Performance Indicators</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Current</th>
+<th>Target</th>
+<th>Next Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fleet Availability</td>
+<td>94.2%</td>
+<td>99.0%</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Failure Rate</td>
+<td>28%</td>
+<td>&lt;15%</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Mean Time to Repair</td>
+<td>8.2 hours</td>
+<td>4.5 hours</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Global Risk Score</td>
+<td>54%</td>
+<td>35%</td>
+<td>Monthly</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Report Generated</strong>: 2025-10-12 06:30 UTC<br>
+<strong>Next Automated Update</strong>: 2025-10-13 06:30 UTC (Daily for Critical Assets)<br>
+<strong>Emergency Escalation</strong>: Marcus Chen - +1-555-0199</p>
+<hr>
+
+</body>
+</html>
