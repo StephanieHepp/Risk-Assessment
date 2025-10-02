@@ -1,4 +1,4 @@
-# ARGOS Report -- Lifetime Extension -- LR-P-1007-001
+# Lifetime Extension Report
 
 **CIP Engineer:** Marcus Chen
 
