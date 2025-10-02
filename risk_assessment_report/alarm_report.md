@@ -87,11 +87,6 @@ Past incidents on this pump model indicate that rising vibration is often associ
 | **Parts Required** | Front bearing assembly, seals | Pre-order recommended |
 | **Labor** | 2 technicians | Coordinate scheduling |
 
-### Alternative Actions (If Immediate Removal Not Feasible)
-
-1. **Increase Monitoring Frequency**: Daily telemetry review instead of weekly
-2. **Reduce Process Load**: Lower chamber utilization to reduce pump stress
-3. **Emergency Spares**: Position backup pump for hot-swap if failure occurs
 
 ---
 
