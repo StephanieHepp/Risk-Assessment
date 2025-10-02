@@ -38,17 +38,6 @@
 | **Temperature** | Normal | Spec Range | 🟢 Normal | Stable |
 | **Runtime** | 16,250 h | 16,000 h target | 🟡 Extended | Increasing |
 
-### Lifetime Utilization
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#7CB342', 'secondaryColor':'#FFA726'}}}%%
-pie title Runtime vs Target Lifetime
-    "Completed: 16,250 h (102%)" : 102
-    "Reserve Capacity (Estimated)" : 48
-```
-
-**Lifetime Analysis**: Pump has exceeded standard replacement interval by 250 hours (2%) while maintaining excellent health metrics, suggesting significant remaining useful life.
-
 ---
 
 ## Risk Assessment & Historical Analysis
