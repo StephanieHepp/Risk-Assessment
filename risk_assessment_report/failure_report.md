@@ -1,20 +1,20 @@
 # Failure Report
 
-**CIP Engineer:** Marcus Chen
-**Date:** 2025-10-02
-**Incident ID:** INC-2025-0923-012
-**Asset:** Pump #P-0177
-**Chamber:** Chamber #CVD115 (AMAT - Centura - Chamber B)
+**CIP Engineer:** Marcus Chen 
+**Date:** 2025-10-02 
+**Incident ID:** INC-2025-0923-012 
+**Asset:** Pump #P-0177 
+**Chamber:** Chamber #CVD115 (AMAT - Centura - Chamber B) 
 **Analysis Method:** 8D / DMAIC
 
 ---
 
 ## Executive Summary
 
-**Failure Mode**: Shaft broken due to excessive load on main bearing
-**Impact**: Unplanned downtime of 8.5 hours, production loss of 45 wafers
-**Root Cause**: Load on main bearing (MB) exceeded design limits due to combination of process byproduct accumulation and bearing wear
-**Status**: Root cause investigation complete, corrective measures in implementation phase
+**Failure Mode**: Shaft broken due to excessive load on main bearing 
+**Impact**: Unplanned downtime of 8.5 hours, production loss of 45 wafers 
+**Root Cause**: Load on main bearing (MB) exceeded design limits due to combination of process byproduct accumulation and bearing wear 
+**Status**: Root cause investigation complete, corrective measures in implementation phase 
 
 ---
 
