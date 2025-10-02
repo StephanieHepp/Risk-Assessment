@@ -59,21 +59,6 @@ Analysis of this pump model (AMAT Endura configuration) and specific tool applic
 3. **Excellent Maintenance History**: Regular preventive maintenance completed on schedule
 4. **Operating Environment**: Clean room conditions minimize contamination risk
 
-### Risk Analysis
-
-**Failure Probability**: Very Low (17% risk score)
-
-**Risk Matrix**:
-
-| Risk Factor | Assessment | Impact on Extension |
-|-------------|------------|---------------------|
-| **Bearing Condition** | Excellent | ✅ Supports extension |
-| **Seal Integrity** | No degradation detected | ✅ Supports extension |
-| **Process Criticality** | Moderate | ✅ Manageable |
-| **Backup Availability** | Spare available | ✅ Risk mitigated |
-
-**Safe Extension Threshold**: Continue operation while risk score remains < 50%
-
 ---
 
 ## Recommendations
