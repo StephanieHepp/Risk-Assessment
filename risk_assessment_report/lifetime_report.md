@@ -1,4 +1,4 @@
-# ARGOS Lifetime Extension Report
+# Lifetime Extension Report
 **Report ID: LR-P-1007-001**  
 **Asset: Pump #P-1007**  
 **Chamber: SPU023 (AMAT - Endura - Chamber A)**  
