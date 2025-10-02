@@ -1,4 +1,4 @@
-# ARGOS Report -- Health Alarm Summary -- AR-P-0107-001
+# Health Alarm Report
 
 **CIP Engineer:** Marcus Chen
 
