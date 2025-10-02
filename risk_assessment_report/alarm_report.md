@@ -27,23 +27,6 @@
 
 ## Data Analysis Dashboard
 
-### Key Performance Indicators
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#E57373', 'secondaryColor':'#FFA726', 'tertiaryColor':'#7CB342'}}}%%
-graph LR
-    A[Health Index: 2.5] -->|Critical| B[Immediate Action Required]
-    C[Vibration RMS: 3.2 mm/s] -->|↑40% vs baseline| B
-    D[Power: +7%] -->|Elevated| B
-    E[Temperature] -->|Normal| F[Within Specs]
-    
-    style A fill:#E57373,stroke:#666,color:#fff
-    style C fill:#E57373,stroke:#666,color:#fff
-    style D fill:#FFA726,stroke:#666,color:#fff
-    style E fill:#7CB342,stroke:#666,color:#fff
-    style B fill:#FF6B35,stroke:#666,color:#fff
-```
-
 ### Telemetry Analysis
 
 | Metric | Current Value | Baseline | Deviation | Status |
