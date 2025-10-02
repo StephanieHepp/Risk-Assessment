@@ -101,26 +101,6 @@ Past incidents on this pump model indicate that rising vibration is often associ
 
 ---
 
-**Next Steps Upon Approval**:
-1. Coordinate production schedule for chamber downtime
-2. Order replacement parts (2-day lead time)
-3. Schedule maintenance crew
-4. Prepare backup pump if available
-5. Update CMMS with work order
-
----
-
-## Key Performance Impact
-
-| KPI | Before Action | After Action | Expected Improvement |
-|-----|---------------|--------------|---------------------|
-| Risk Score | 86% | < 20% | 66% reduction |
-| Health Index | 2.5 | < 0.5 | Normal operation |
-| Unplanned Downtime Risk | High | Low | Mitigated |
-| Equipment Availability | At Risk | Restored | Protected |
-
----
-
 **Report Generated**: 2025-10-21 09:00 UTC  
 **Alarm Status**: 🔴 Active - Awaiting Customer Validation  
 **Emergency Contact**: Marcus Chen - +1-555-0199  
