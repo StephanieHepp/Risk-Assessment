@@ -72,25 +72,6 @@
 
 ---
 
-## Failure Timeline
-
-| Time | Event | Action Taken |
-|------|-------|--------------|
-| 15:42 | Pump alarm triggered - high vibration detected | Automated alarm notification sent |
-| 15:45 | Process chamber automatically shut down | Tool safety protocol activated |
-| 15:50 | Technician arrived on site | Visual inspection initiated |
-| 16:10 | Confirmed pump seized, shaft rotation blocked | Emergency pump removal authorized |
-| 16:30 | Spare pump retrieval initiated | Logistics coordinated |
-| 18:45 | New pump installed (S/N AP8012456) | Installation completed |
-| 20:15 | System verification and process qualification | Tool released to production |
-| 24:12 | Failed pump disassembly and analysis begun | Root cause investigation started |
-
-**Total Downtime**: 8.5 hours
-
-**Production Impact**: 45 wafers scrapped, $67,500 estimated loss
-
----
-
 ## Pump Condition / Observations
 
 - [x] Abnormal noise
