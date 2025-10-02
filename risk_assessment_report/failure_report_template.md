@@ -229,25 +229,6 @@
 - Unclear ownership of telemetry alert response
 - Insufficient training on early intervention protocols
 
----
-
-## Failure Mode Analysis
-
-### Primary Failure Mode: Mechanical Fatigue
-
-**Failure Mechanism**: High-cycle fatigue leading to shaft fracture
-
-**Contributing Factors**:
-1. Bearing wear creating uneven load distribution (40% contribution)
-2. Extended operation beyond target lifetime (30% contribution)
-3. Process contamination increasing friction (20% contribution)
-4. Inadequate preventive maintenance (10% contribution)
-
-### Secondary Observations
-
-- Bearing outer race wear significantly exceeded inner race wear (indicates external load factors)
-- Contamination deposits concentrated at high-temperature zones
-- No evidence of lubrication degradation or oil contamination
 
 ---
 
@@ -265,7 +246,7 @@
 
 ---
 
-## Containment Actions (D3)
+## Actions 
 
 ### Immediate Actions Taken
 
@@ -286,8 +267,6 @@
 
 ---
 
-## Corrective Actions (D5)
-
 ### Short-Term Actions (0-30 Days)
 
 1. **Implement Preventive Maintenance Schedule**
@@ -302,169 +281,28 @@
    - Target Date: 2025-10-10
    - Status: Process change request submitted
 
-3. **Define Telemetry Response Protocol**
-   - Create escalation matrix for health index thresholds
-   - Health Index > 1.5: Weekly review
-   - Health Index > 2.0: Immediate engineering assessment
-   - Health Index > 2.5: Mandatory pump exchange within 48 hours
-   - Owner: CIP Engineering Team
-   - Target Date: 2025-10-20
-   - Status: Draft in review
 
 ### Long-Term Actions (30-90 Days)
 
-4. **Transition to Condition-Based Maintenance**
+1. **Transition to Condition-Based Maintenance**
    - Implement predictive maintenance program for all critical pumps
    - Integrate RUL calculations into maintenance planning
    - Owner: Reliability Engineering
    - Target Date: 2025-12-31
    - Status: Project initiated
 
-5. **Enhance Process Contamination Control**
-   - Evaluate additional filtration or abatement options
-   - Consider periodic in-situ cleaning procedures
-   - Owner: Process Engineering
-   - Target Date: 2025-12-15
-   - Status: Feasibility study phase
-
 ---
 
-## Implementation Plan (D6)
+## Implementation Plan 
 
 | Action Item | Owner | Target Date | Resources Required | Success Criteria | Status |
 |-------------|-------|-------------|-------------------|------------------|--------|
 | PM Schedule Implementation | Maint. Team | 2025-10-15 | CMMS update, scheduling tool | All pumps scheduled | In Progress |
 | N2 Flow Increase | Process Eng | 2025-10-10 | Process qualification | Flow at 60 slm verified | Pending |
-| Telemetry Protocol | CIP Team | 2025-10-20 | Training materials | Protocol documented + trained | In Progress |
 | Predictive Maintenance | Reliability | 2025-12-31 | Software integration | System live + validated | Initiated |
-| Contamination Control | Process Eng | 2025-12-15 | Capital budget approval | Solution identified | Planning |
 
 ---
 
-## Preventive Measures (D7)
-
-### Process Changes
-
-1. **Purge Gas Flow Optimization**
-   - Increase from 45 slm to 60 slm across all PECVD tools
-   - Reduces contamination ingress by estimated 35%
-
-2. **Service Interval Establishment**
-   - 18,000 hour mandatory service interval
-   - Prevents operation beyond bearing design life
-
-### Monitoring Enhancements
-
-3. **Enhanced Telemetry Response**
-   - Proactive intervention at Health Index 2.0
-   - Prevents progression to critical failure modes
-
-4. **Weekly Fleet Health Review**
-   - Dedicated review of all at-risk assets (HI > 1.5)
-   - Early identification of degradation trends
-
-### Documentation
-
-5. **Updated Operating Procedures**
-   - Clear escalation paths for telemetry alerts
-   - Defined roles and responsibilities for response
-
-6. **Lessons Learned Distribution**
-   - Share findings with all sites using similar equipment
-   - Update training materials for technicians and engineers
-
----
-
-## Standardization (D8)
-
-### Knowledge Transfer
-
-1. **Cross-Functional Review Meeting**
-   - Present findings to maintenance, process, and engineering teams
-   - Scheduled: 2025-10-12
-
-2. **Best Practices Documentation**
-   - Update maintenance standards for vacuum pump fleet
-   - Include in onboarding materials for new engineers
-
-3. **Similar Equipment Assessment**
-   - Review all pumps in run-to-fail mode
-   - Prioritize transition to condition-based maintenance
-
-### Continuous Improvement
-
-4. **KPI Monitoring**
-   - Track MTBF improvement post-implementation
-   - Monitor unplanned downtime reduction
-   - Target: 50% reduction in pump-related failures within 6 months
-
-5. **Quarterly Review**
-   - Assess effectiveness of corrective actions
-   - Adjust protocols based on field performance data
-
----
-
-## Key Performance Impact
-
-| KPI | Before Failure | After Implementation | Target | Expected Improvement |
-|-----|----------------|---------------------|--------|---------------------|
-| Pump MTBF | 18,000 h | 24,000 h | 25,000 h | +33% |
-| Unplanned Downtime | 45 h/year | 18 h/year | 15 h/year | -60% |
-| Health Index Response Time | None | < 24 h | < 12 h | New metric |
-| Preventive Maintenance Coverage | 0% | 100% | 100% | New program |
-| Cost per Failure Event | $67,500 | $8,500 | < $10,000 | -87% |
-
----
-
-## Lessons Learned
-
-### Technical Lessons
-
-1. **Extended Operation Risks**: Operating equipment beyond target lifetime without enhanced monitoring significantly increases failure risk
-2. **Contamination Impact**: Process byproduct accumulation accelerates wear even in sealed systems
-3. **Bearing Wear Patterns**: Asymmetric bearing wear indicates external loading factors requiring investigation
-
-### Operational Lessons
-
-4. **Telemetry Value**: Early indicators were present but not acted upon; clear escalation protocols essential
-5. **Run-to-Fail Limitations**: Run-to-fail may be cost-effective for non-critical assets but inappropriate for production-critical equipment
-6. **Proactive Intervention**: Small investments in preventive measures avoid large failure costs
-
----
-
-## Cost Analysis
-
-### Failure Costs
-
-| Cost Category | Amount |
-|---------------|--------|
-| Production Loss (45 wafers) | $67,500 |
-| Replacement Pump | $18,000 |
-| Emergency Labor (overtime) | $3,200 |
-| Investigation & Analysis | $2,800 |
-| **Total Failure Cost** | **$91,500** |
-
-### Preventive Program Costs (Annual)
-
-| Cost Category | Amount |
-|---------------|--------|
-| Scheduled Maintenance (4 pumps) | $28,000 |
-| Enhanced Telemetry Monitoring | $5,000 |
-| Process Modifications | $12,000 |
-| Training & Documentation | $3,000 |
-| **Total Annual Prevention Cost** | **$48,000** |
-
-**ROI Calculation**: Break-even after 1 prevented failure event per 2 years
-
----
-
-## Additional Comments
-
-The failure analysis clearly demonstrates the value of transitioning from reactive to proactive maintenance strategies. While the immediate failure was caused by mechanical factors (bearing wear and shaft fracture), the systemic root cause was inadequate maintenance planning and unclear response protocols for available telemetry data.
-
-The corrective actions address both the technical failure modes and the organizational factors that allowed the failure to progress. Implementation of these measures is expected to significantly improve equipment reliability and reduce unplanned downtime across the vacuum pump fleet.
-
----
 
 ## Approvals
 
