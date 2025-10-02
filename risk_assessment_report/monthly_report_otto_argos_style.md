@@ -183,17 +183,3 @@ pie title Primary Failure Modes
 **Report Generated**: 2025-10-12 06:30 UTC  
 **Next Automated Update**: 2025-10-13 06:30 UTC (Daily for Critical Assets)  
 **Emergency Escalation**: Marcus Chen - +1-555-0199  
-
----
-
-## Styling Guide
-
-**Farbpalette** (an Plattform angepasst):
-- **Critical/Alarm**: `#E57373` (helles Rot)
-- **High/Warning**: `#FFA726` (Orange)
-- **Medium**: `#FFD54F` (helles Gelb)
-- **Low/Running**: `#7CB342` (Grün)
-- **Neutral**: `#78909C` (Blaugrau)
-- **Hintergrund**: `#FFFFFF` / `#F5F5F5`
-- **Text**: `#333333`
-- **Border**: `#DDDDDD` / `#666666`
