@@ -20,32 +20,13 @@
 | **Detection Method** | ARGOS Telemetry Monitoring | Automated |
 | **Risk Score** | ![Low](https://img.shields.io/badge/17%25-7CB342?style=flat-square) | Low Risk |
 | **Health Index** | 0.1 | ✅ Excellent |
-| **Current Runtime** | 16,250 h (102% of target) | Extended Operation |
+| **Current Runtime** | 16,250 h | 102% of target  |
 | **Target Lifetime** | 16,000 h (Standard) | Exceeded |
 | **Status** | Lifetime extension recommended | Awaiting Validation |
 
 ---
 
 ## Performance Analysis Dashboard
-
-### Health Status Visualization
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#7CB342', 'secondaryColor':'#AED581', 'tertiaryColor':'#DCE775'}}}%%
-graph LR
-    A[Health Index: 0.1] -->|Excellent| B[Safe to Extend]
-    C[Vibration RMS] -->|Normal Range| B
-    D[Power Consumption] -->|Normal Range| B
-    E[Temperature] -->|Normal Range| B
-    F[Runtime: 102%] -->|Beyond Target| G[Monitoring Required]
-    
-    style A fill:#7CB342,stroke:#666,color:#fff
-    style C fill:#7CB342,stroke:#666,color:#fff
-    style D fill:#7CB342,stroke:#666,color:#fff
-    style E fill:#7CB342,stroke:#666,color:#fff
-    style B fill:#66BB6A,stroke:#666,color:#fff
-    style G fill:#FFA726,stroke:#666,color:#fff
-```
 
 ### Telemetry Analysis
 
