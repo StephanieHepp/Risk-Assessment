@@ -1,4 +1,4 @@
-# ARGOS Health Alarm Report
+# Health Alarm Report
 **Report ID: AR-P-0107-001**  
 **Asset: Pump #P-0107**  
 **Chamber: CVD105 (AMAT - Centura - Chamber A)**  
