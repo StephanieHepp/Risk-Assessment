@@ -18,7 +18,7 @@
 |-----------|-------|--------|
 | **Alarm Raised** | October 20, 2025 14:26 | 🔴 Active |
 | **Detection Method** | ARGOS Telemetry Monitoring | Automated |
-| **Risk Score** | ![Critical](https://img.shields.io/badge/86%25-E57373?style=flat-square) | Critical |
+| **Risk Score** | 86% | 🔴 Critical |
 | **Health Index** | 0.8 | ⚠️ Degraded |
 | **Current Runtime** | 18,450 h | 93% of target |
 | **Status** | Service action recommended | Awaiting Validation |
