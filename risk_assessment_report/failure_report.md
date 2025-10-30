@@ -25,8 +25,8 @@
 | **Failure Detected** | 2025-09-23 15:42 |
 | **Detection Method** | Pump alarm + abnormal vibration |
 | **Failure Type** | Mechanical failure - shaft fracture |
-| **Risk Score** | 92% (Critical) |
-| **Health Index** | 3.2 (Critical condition) |
+| **Risk Score** | 92% (🔴 Critical) |
+| **Health Index** | 3.2 (🔴 Critical condition) |
 | **RUL at Failure** | -120 hours (negative indicates overdue) |
 | **Current Runtime** | 22,847 h (114% of target) |
 | **Last Maintenance** | 2025-06-15 (15 weeks ago) |
@@ -96,7 +96,7 @@
 | **Vibration RMS** | 2.1 mm/s | 4.8 mm/s | 6.7 mm/s | < 2.5 mm/s | +168% |
 | **Power Consumption** | 1850 W | 2140 W | 2450 W | 1800 W | +36% |
 | **Bearing Temperature** | 68°C | 89°C | 112°C | < 75°C | +49% |
-| **RUL** | 350 h | 45 h | -120 h | > 1000 h | Critical |
+| **RUL** | 350 h | 45 h | -120 h | > 1000 h | 🔴 Critical |
 
 ### Contributing Factors
 
