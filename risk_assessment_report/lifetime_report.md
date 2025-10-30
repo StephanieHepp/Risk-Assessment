@@ -19,7 +19,7 @@
 | **Alert Raised** | October 20, 2025 14:26 | 🟡 Lifetime Threshold |
 | **Detection Method** | ARGOS Telemetry Monitoring | Automated |
 | **Risk Score** | 17% | 🟢 Low Risk |
-| **Health Index** | 0.1 | ✅ Excellent |
+| **Health Index** | 0.1 | 🟢 Excellent |
 | **Current Runtime** | 16,250 h | 102% of target  |
 | **Target Lifetime** | 16,000 h (Standard) | Exceeded |
 | **Status** | Lifetime extension recommended | Awaiting Validation |
