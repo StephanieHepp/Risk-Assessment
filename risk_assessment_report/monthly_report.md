@@ -128,11 +128,11 @@ pie title Primary Failure Modes
 
 | Asset ID | Location | Risk Score | Recommendation | Associated Report | Status |
 |----------|----------|------------|----------------|-------------------|--------|
-| **P-0012** | FUR290 | 🔴 78% | Pump Removal | AR-P-0012-001 | Waiting for customer validation |
-| **P-1056** | CVD200 | 🔴 75% | Increase Dilution | AR-P-1056-002 | Service action scheduled on 21/10/2025 |
-| **P-1091** | CVD201 | 🔴 72% | Check Foreline and Exhaust | AR-P-1091-013 | Service action scheduled on 01/11/2025 |
-| **P-1145** | SPU691 | 🔴 69% | Install a Heating Jacket | AR-P-1145-001 | Waiting for customer validation |
-| **P-0178** | ETC089 | 🔴 67% | Install a Cold Trap | AR-P-0178-007 | Service action scheduled on 31/10/2025 |
+| **P-0012** | FUR290 | 🟠 78% | Pump Removal | AR-P-0012-001 | Waiting for customer validation |
+| **P-1056** | CVD200 | 🟠 75% | Increase Dilution | AR-P-1056-002 | Service action scheduled on 21/10/2025 |
+| **P-1091** | CVD201 | 🟠 72% | Check Foreline and Exhaust | AR-P-1091-013 | Service action scheduled on 01/11/2025 |
+| **P-1145** | SPU691 | 🟠 69% | Install a Heating Jacket | AR-P-1145-001 | Waiting for customer validation |
+| **P-0178** | ETC089 | 🟠 67% | Install a Cold Trap | AR-P-0178-007 | Service action scheduled on 31/10/2025 |
 
 **High Risk Summary**: 15 assets in deteriorating condition. [View All 15 Assets →](#detailed-high-risk)
 
